@@ -1,7 +1,3 @@
-# `@docusaurus/theme-search-algolia`
+# [Work in Progress] `docusaurus-theme-search-typesense`
 
-Algolia search component for Docusaurus.
-
-## Usage
-
-See [`@docusaurus/theme-search-algolia` documentation](https://docusaurus.io/docs/api/themes/@docusaurus/theme-search-algolia).
+Typesense search component for Docusaurus.
