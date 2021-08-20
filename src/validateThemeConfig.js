@@ -9,29 +9,24 @@ const {Joi} = require('@docusaurus/utils-validation');
 
 const DEFAULT_CONFIG = {
   contextualSearch: false, // future: maybe we want to enable this by default
-
-  // By default, all Docusaurus sites are using the same AppId
-  // This has been designed on purpose with Algolia.
-  appId: 'BH4D9OD16A',
-
+  filterBy: '',
   searchParameters: {},
 };
 exports.DEFAULT_CONFIG = DEFAULT_CONFIG;
 
 const Schema = Joi.object({
-  algolia: Joi.object({
+  typesense: Joi.object({
     // Docusaurus attributes
     contextualSearch: Joi.boolean().default(DEFAULT_CONFIG.contextualSearch),
 
     // Algolia attributes
-    appId: Joi.string().default(DEFAULT_CONFIG.appId),
-    apiKey: Joi.string().required(),
+    serverConfig: Joi.object(),
     indexName: Joi.string().required(),
     searchParameters: Joi.object()
       .default(DEFAULT_CONFIG.searchParameters)
       .unknown(),
   })
-    .label('themeConfig.algolia')
+    .label('themeConfig.typesense')
     .required()
     .unknown(), // DocSearch 3 is still alpha: don't validate the rest for now
 });

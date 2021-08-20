@@ -1,7 +1,7 @@
 {
-  "name": "@docusaurus/theme-search-algolia",
-  "version": "2.0.0-beta.4",
-  "description": "Algolia search component for Docusaurus.",
+  "name": "docusaurus-theme-search-typesense",
+  "version": "0.1.0",
+  "description": "Typesense search component for Docusaurus.",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
@@ -22,7 +22,8 @@
     "algoliasearch-helper": "^3.3.4",
     "clsx": "^1.1.1",
     "eta": "^1.12.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "typesense-instantsearch-adapter": "^2.0.1"
   },
   "peerDependencies": {
     "react": "^16.8.4 || ^17.0.0",

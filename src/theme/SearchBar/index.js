@@ -11,12 +11,12 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useHistory} from '@docusaurus/router';
 import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
-import Head from '@docusaurus/Head';
 import useSearchQuery from '@theme/hooks/useSearchQuery';
 import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
-import useAlgoliaContextualFacetFilters from '@theme/hooks/useAlgoliaContextualFacetFilters';
+import useTypesenseContextualFilters from '@theme/hooks/useTypesenseContextualFilters';
 import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
+import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 
 let DocSearchModal = null;
 
@@ -37,21 +37,30 @@ function ResultsFooter({state, onClose}) {
 function DocSearch({contextualSearch, ...props}) {
   const {siteMetadata} = useDocusaurusContext();
 
-  const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
+  const contextualSearchFilters = useTypesenseContextualFilters();
 
-  const configFacetFilters = props.searchParameters?.facetFilters ?? [];
+  const configFilters = props.searchParameters?.filterBy ?? [];
 
-  const facetFilters = contextualSearch
+  const filterBy = contextualSearch
     ? // Merge contextual search filters with config filters
-      [...contextualSearchFacetFilters, ...configFacetFilters]
+      [...contextualSearchFilters, ...configFilters]
     : // ... or use config facetFilters
-      configFacetFilters;
+      configFilters;
 
   // we let user override default searchParameters if he wants to
   const searchParameters = {
     ...props.searchParameters,
-    facetFilters,
+    filterBy,
+    queryBy: 'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
+    includeFields:
+      'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,anchor,url,type,id',
+    highlightFullFields:
+      'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
+    group_by: 'url',
+    group_limit: 3,
   };
+
+  const typesenseServerConfig = props.serverConfig;
 
   const {withBaseUrl} = useBaseUrlUtils();
   const history = useHistory();
@@ -128,12 +137,15 @@ function DocSearch({contextualSearch, ...props}) {
 
   const transformSearchClient = useCallback(
     (searchClient) => {
-      searchClient.addAlgoliaAgent(
-        'docusaurus',
-        siteMetadata.docusaurusVersion,
-      );
+      const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
+        server: typesenseServerConfig,
+        // The following parameters are directly passed to Typesense's search API endpoint.
+        //  So you can pass any parameters supported by the search endpoint below.
+        //  queryBy is required.
+        additionalSearchParameters: searchParameters,
+      });
 
-      return searchClient;
+      return typesenseInstantsearchAdapter.searchClient;
     },
     [siteMetadata.docusaurusVersion],
   );
@@ -154,17 +166,6 @@ function DocSearch({contextualSearch, ...props}) {
 
   return (
     <>
-      <Head>
-        {/* This hints the browser that the website will load data from Algolia,
-        and allows it to preconnect to the DocSearch cluster. It makes the first
-        query faster, especially on mobile. */}
-        <link
-          rel="preconnect"
-          href={`https://${props.appId}-dsn.algolia.net`}
-          crossOrigin="anonymous"
-        />
-      </Head>
-
       <div className={styles.searchBox}>
         <DocSearchButton
           onTouchStart={importDocSearchModalIfNeeded}
@@ -201,7 +202,7 @@ function DocSearch({contextualSearch, ...props}) {
 
 function SearchBar() {
   const {siteConfig} = useDocusaurusContext();
-  return <DocSearch {...siteConfig.themeConfig.algolia} />;
+  return <DocSearch {...siteConfig.themeConfig.typesense} />;
 }
 
 export default SearchBar;

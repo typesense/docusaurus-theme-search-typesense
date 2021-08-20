@@ -35,7 +35,7 @@ function theme(context) {
     path.resolve(__dirname, pageComponent);
 
   return {
-    name: 'docusaurus-theme-search-algolia',
+    name: 'docusaurus-theme-search-typesense',
 
     getThemePath() {
       return path.resolve(__dirname, './theme');

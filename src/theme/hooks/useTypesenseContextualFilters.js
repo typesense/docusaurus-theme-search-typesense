@@ -8,7 +8,7 @@
 import useContextualSearchFilters from '@theme/hooks/useContextualSearchFilters';
 
 // Translate search-engine agnostic search filters to Algolia search filters
-export default function useAlgoliaContextualFacetFilters() {
+export default function useTypesenseContextualFilters() {
   const {locale, tags} = useContextualSearchFilters();
 
   // seems safe to convert locale->language, see AlgoliaSearchMetadatas comment
@@ -16,5 +16,5 @@ export default function useAlgoliaContextualFacetFilters() {
 
   const tagsFilter = tags.map((tag) => `docusaurus_tag:${tag}`);
 
-  return [languageFilter, tagsFilter];
+  return `${languageFilter} && ${tagsFilter}`;
 }
