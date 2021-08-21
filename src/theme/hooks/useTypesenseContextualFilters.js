@@ -12,9 +12,12 @@ export default function useTypesenseContextualFilters() {
   const {locale, tags} = useContextualSearchFilters();
 
   // seems safe to convert locale->language, see AlgoliaSearchMetadatas comment
-  const languageFilter = `language:${locale}`;
+  const languageFilter = `language:=${locale}`;
 
-  const tagsFilter = tags.map((tag) => `docusaurus_tag:${tag}`);
+  let tagsFilter
+  if (tags.length > 0) {
+    tagsFilter = `docusaurus_tag:=[${tags.join(',')}]`
+  }
 
-  return `${languageFilter} && ${tagsFilter}`;
+  return [languageFilter, tagsFilter].filter(e => e).join(' && ');
 }

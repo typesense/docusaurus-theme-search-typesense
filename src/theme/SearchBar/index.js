@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState, useRef, useCallback, useMemo} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useHistory} from '@docusaurus/router';
@@ -16,7 +16,6 @@ import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
 import useTypesenseContextualFilters from '@theme/hooks/useTypesenseContextualFilters';
 import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
-import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 
 let DocSearchModal = null;
 
@@ -37,30 +36,24 @@ function ResultsFooter({state, onClose}) {
 function DocSearch({contextualSearch, ...props}) {
   const {siteMetadata} = useDocusaurusContext();
 
-  const contextualSearchFilters = useTypesenseContextualFilters();
+  const contextualSearchFacetFilters = useTypesenseContextualFilters();
 
-  const configFilters = props.searchParameters?.filterBy ?? [];
+  const configFacetFilters = props.searchParameters?.filter_by ?? '';
 
-  const filterBy = contextualSearch
+  const facetFilters = contextualSearch
     ? // Merge contextual search filters with config filters
-      [...contextualSearchFilters, ...configFilters]
+    [contextualSearchFacetFilters, configFacetFilters].filter(e => e).join(' && ')
     : // ... or use config facetFilters
-      configFilters;
+    configFacetFilters;
 
   // we let user override default searchParameters if he wants to
-  const searchParameters = {
-    ...props.searchParameters,
-    filterBy,
-    queryBy: 'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
-    includeFields:
-      'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,anchor,url,type,id',
-    highlightFullFields:
-      'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
-    group_by: 'url',
-    group_limit: 3,
+  const typesenseSearchParameters = {
+    filter_by: facetFilters,
+    ...props.typesenseSearchParameters,
   };
 
-  const typesenseServerConfig = props.serverConfig;
+  const typesenseServerConfig = props.typesenseServerConfig;
+  const typesenseCollectionName = props.typesenseCollectionName;
 
   const {withBaseUrl} = useBaseUrlUtils();
   const history = useHistory();
@@ -135,21 +128,6 @@ function DocSearch({contextualSearch, ...props}) {
     [onClose],
   );
 
-  const transformSearchClient = useCallback(
-    (searchClient) => {
-      const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
-        server: typesenseServerConfig,
-        // The following parameters are directly passed to Typesense's search API endpoint.
-        //  So you can pass any parameters supported by the search endpoint below.
-        //  queryBy is required.
-        additionalSearchParameters: searchParameters,
-      });
-
-      return typesenseInstantsearchAdapter.searchClient;
-    },
-    [siteMetadata.docusaurusVersion],
-  );
-
   useDocSearchKeyboardEvents({
     isOpen,
     onOpen,
@@ -190,9 +168,10 @@ function DocSearch({contextualSearch, ...props}) {
             transformItems={transformItems}
             hitComponent={Hit}
             resultsFooterComponent={resultsFooterComponent}
-            transformSearchClient={transformSearchClient}
             {...props}
-            searchParameters={searchParameters}
+            typesenseSearchParameters={typesenseSearchParameters}
+            typesenseServerConfig={typesenseServerConfig}
+            typesenseCollectionName={typesenseCollectionName}
           />,
           searchContainer.current,
         )}

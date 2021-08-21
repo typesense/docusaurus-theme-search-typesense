@@ -9,8 +9,7 @@ const {Joi} = require('@docusaurus/utils-validation');
 
 const DEFAULT_CONFIG = {
   contextualSearch: false, // future: maybe we want to enable this by default
-  filterBy: '',
-  searchParameters: {},
+  typesenseSearchParameters: {},
 };
 exports.DEFAULT_CONFIG = DEFAULT_CONFIG;
 
@@ -20,10 +19,10 @@ const Schema = Joi.object({
     contextualSearch: Joi.boolean().default(DEFAULT_CONFIG.contextualSearch),
 
     // Algolia attributes
-    serverConfig: Joi.object(),
-    indexName: Joi.string().required(),
-    searchParameters: Joi.object()
-      .default(DEFAULT_CONFIG.searchParameters)
+    typesenseServerConfig: Joi.object(),
+    typesenseCollectionName: Joi.string().required(),
+    typesenseSearchParameters: Joi.object()
+      .default(DEFAULT_CONFIG.typesenseSearchParameters)
       .unknown(),
   })
     .label('themeConfig.typesense')

@@ -23,6 +23,7 @@
     "clsx": "^1.1.1",
     "eta": "^1.12.1",
     "lodash": "^4.17.20",
+    "typesense": "^0.14.0",
     "typesense-instantsearch-adapter": "^2.0.1"
   },
   "peerDependencies": {
