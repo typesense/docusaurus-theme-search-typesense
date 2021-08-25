@@ -12,7 +12,7 @@ import {useHistory} from '@docusaurus/router';
 import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import useSearchQuery from '@theme/hooks/useSearchQuery';
-import {DocSearchButton, useDocSearchKeyboardEvents} from '@docsearch/react';
+import {DocSearchButton, useDocSearchKeyboardEvents} from 'typesense-docsearch-react';
 import useTypesenseContextualFilters from '@theme/hooks/useTypesenseContextualFilters';
 import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
@@ -68,8 +68,8 @@ function DocSearch({contextualSearch, ...props}) {
     }
 
     return Promise.all([
-      import('@docsearch/react/modal'),
-      import('@docsearch/react/style'),
+      import('typesense-docsearch-react/modal'),
+      import('typesense-docsearch-react/style'),
       import('./styles.css'),
     ]).then(([{DocSearchModal: Modal}]) => {
       DocSearchModal = Modal;
