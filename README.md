@@ -63,3 +63,11 @@ yarn add docusaurus-theme-search-typesense
   }
 }
 ```
+
+**Step 3:** (Optional) Style your search component following the instructions [here](https://docusaurus.io/docs/search#styling-your-algolia-search). 
+
+You'll notice mention of Algolia in the CSS class names, that's because this is a fork of the Docusaurus Algolia search component. 
+
+## Help
+
+If you have any questions or run into any problems, please create a Github issue and we'll try our best to help.
