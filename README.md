@@ -10,7 +10,7 @@ If you're new to Typesense, it is an **open source search engine** that is simpl
 
 Think of it as an open source alternative to Algolia and an easier-to-use, batteries-included alternative to ElasticSearch. Get a quick overview from [this guide](https://typesense.org/guide/).
 
-## Usage
+## Documentation
 
 Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: https://typesense.org/docs/latest/guide/docsearch.html.
 
