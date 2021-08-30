@@ -12,59 +12,7 @@ Think of it as an open source alternative to Algolia and an easier-to-use, batte
 
 ## Usage
 
-**Step 0:** Read detailed step-by-step instructions on how to configure and setup the typesense-docsearch-scraper here: https://typesense.org/docs/latest/guide/docsearch.html
-
-**Step 1:** Once you've setup the scraper, install this plugin:
-
-```shell
-npm install docusaurus-theme-search-typesense --save
-
-# or 
-
-yarn add docusaurus-theme-search-typesense
-```
-
-**Step 2:** Add the following to `docusaurus.config.js`
-
-```js
-{
-  themes: ['docusaurus-theme-search-typesense'],
-  themeConfig: {
-    typesense: {
-      typesenseCollectionName: 'docusaurus-2', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
-      
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: 'xxx-1.a1.typesense.net',
-            port: 443,
-            protocol: 'https',
-          },
-          {
-            host: 'xxx-2.a1.typesense.net',
-            port: 443,
-            protocol: 'https',
-          },
-          {
-            host: 'xxx-3.a1.typesense.net',
-            port: 443,
-            protocol: 'https',
-          },
-        ],
-        apiKey: 'xyz',
-      },
-
-      // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.html#arguments
-      typesenseSearchParameters: {},
-
-      // Optional
-      contextualSearch: true,
-    },
-  }
-}
-```
-
-**Step 3:** (Optional) Style your search component following the instructions [here](https://docusaurus.io/docs/search#styling-your-algolia-search). 
+Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: https://typesense.org/docs/latest/guide/docsearch.html.
 
 ## Help
 
