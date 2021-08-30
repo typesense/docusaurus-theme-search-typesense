@@ -1,8 +1,18 @@
-# [Work in Progress] `docusaurus-theme-search-typesense`
+# `docusaurus-theme-search-typesense`
 
-Typesense search component for Docusaurus.
+[Typesense](https://typesense.org) search component for Docusaurus.
+
+#### About Typesense
+
+If you're new to Typesense, it is an **open source search engine** that is simple to use, run and scale, with clean APIs and documentation.
+
+Think of it as an open source alternative to Algolia and an easier-to-use, batteries-included alternative to ElasticSearch. Get a quick overview from [this guide](https://typesense.org/guide/).
 
 ## Usage
+
+**Step 0:** Read detailed step-by-step instructions on how to configure and setup the typesense-docsearch-scraper here: https://typesense.org/docs/latest/guide/docsearch.html
+
+**Step 1:** Once you've setup the scraper, install this plugin:
 
 ```shell
 npm install docusaurus-theme-search-typesense --save
@@ -12,14 +22,14 @@ npm install docusaurus-theme-search-typesense --save
 yarn add docusaurus-theme-search-typesense
 ```
 
-Add the following to `docusaurus.config.js`
+**Step 2:** Add the following to `docusaurus.config.js`
 
 ```js
 {
   themes: ['docusaurus-theme-search-typesense'],
   themeConfig: {
     typesense: {
-      typesenseCollectionName: 'docusaurus-2',
+      typesenseCollectionName: 'docusaurus-2', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
       
       typesenseServerConfig: {
         nodes: [
@@ -42,7 +52,7 @@ Add the following to `docusaurus.config.js`
         apiKey: 'xyz',
       },
 
-      // Optional: Typesense search parameters
+      // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.html#arguments
       typesenseSearchParameters: {},
 
       // Optional
