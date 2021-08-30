@@ -1,6 +1,6 @@
 # `docusaurus-theme-search-typesense`
 
-[Typesense](https://typesense.org) search component for Docusaurus.
+[Typesense](https://typesense.org) search component for Docusaurus powered documentation sites.
 
 #### About Typesense
 
