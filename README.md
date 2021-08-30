@@ -2,6 +2,8 @@
 
 [Typesense](https://typesense.org) search component for Docusaurus powered documentation sites.
 
+This is a fork of the awesome [@docusaurus/theme-search-algolia](https://www.npmjs.com/package/@docusaurus/theme-search-algolia) library customized to work with Typesense.
+
 #### About Typesense
 
 If you're new to Typesense, it is an **open source search engine** that is simple to use, run and scale, with clean APIs and documentation.
