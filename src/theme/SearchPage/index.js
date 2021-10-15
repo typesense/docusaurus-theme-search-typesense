@@ -405,7 +405,7 @@ function SearchPage() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.algolia.com/"
+              href="https://typesense.org/"
               aria-label={translate({
                 id: 'theme.SearchPage.algoliaLabel',
                 message: 'Search by Typesense',
