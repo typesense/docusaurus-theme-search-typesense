@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import useContextualSearchFilters from '@theme/hooks/useContextualSearchFilters';
+import { useContextualSearchFilters } from '@docusaurus/theme-common';
 
 // Translate search-engine agnostic search filters to Algolia search filters
 export default function useTypesenseContextualFilters() {
