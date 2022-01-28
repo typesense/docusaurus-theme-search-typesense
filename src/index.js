@@ -8,7 +8,7 @@
 const path = require('path');
 const fs = require('fs');
 const eta = require('eta');
-const {normalizeUrl, getSwizzledComponent} = require('@docusaurus/utils');
+const {normalizeUrl} = require('@docusaurus/utils');
 const openSearchTemplate = require('./templates/opensearch');
 const {validateThemeConfig} = require('./validateThemeConfig');
 const {memoize} = require('lodash');
@@ -31,7 +31,6 @@ function theme(context) {
   } = context;
   const pageComponent = './theme/SearchPage/index.js';
   const pagePath =
-    getSwizzledComponent(pageComponent) ||
     path.resolve(__dirname, pageComponent);
 
   return {

@@ -15,7 +15,7 @@ import Link from '@docusaurus/Link';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import {useTitleFormatter, usePluralForm} from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useAllDocsData} from '@theme/hooks/useDocs';
+import {useAllDocsData} from '@docusaurus/plugin-content-docs/client';
 import useSearchQuery from '@theme/hooks/useSearchQuery';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
@@ -412,8 +412,7 @@ function SearchPage() {
                 message: 'Search by Typesense',
                 description: 'The ARIA label for Typesense mention',
               })}>
-              <svg fill="none" height="21" viewBox="0 0 141 21" width="141" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink">
+              <svg fill="none" height="21" viewBox="0 0 141 21" width="141" xmlns="http://www.w3.org/2000/svg">
                 <clipPath id="a">
                   <path d="m0 0h141v21h-141z"/>
                 </clipPath>
