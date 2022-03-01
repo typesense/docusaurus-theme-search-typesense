@@ -21,10 +21,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.15",
-    "@docusaurus/theme-common": "2.0.0-beta.15",
-    "@docusaurus/utils": "2.0.0-beta.15",
-    "@docusaurus/utils-validation": "2.0.0-beta.15",
+    "@docusaurus/utils": "2.0.0-beta.16",
+    "@docusaurus/utils-validation": "2.0.0-beta.16",
     "algoliasearch-helper": "^3.7.0",
     "clsx": "^1.1.1",
     "eta": "^1.12.1",
@@ -35,7 +33,9 @@
   },
   "peerDependencies": {
     "react": "^16.8.4 || ^17.0.0",
-    "react-dom": "^16.8.4 || ^17.0.0"
+    "react-dom": "^16.8.4 || ^17.0.0",
+    "@docusaurus/core": "2.0.0-beta.16",
+    "@docusaurus/theme-common": "2.0.0-beta.16"
   },
   "engines": {
     "node": ">=12.13.0"
