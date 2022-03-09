@@ -21,21 +21,21 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@docusaurus/utils": "2.0.0-beta.16",
-    "@docusaurus/utils-validation": "2.0.0-beta.16",
+    "@docusaurus/utils": "2.0.0-beta.17",
+    "@docusaurus/utils-validation": "2.0.0-beta.17",
     "algoliasearch-helper": "^3.7.0",
     "clsx": "^1.1.1",
     "eta": "^1.12.1",
     "lodash": "^4.17.20",
-    "typesense": "^0.14.0",
+    "typesense": "^1.2.2",
     "typesense-docsearch-react": "^0.1.0",
-    "typesense-instantsearch-adapter": "^2.2.0"
+    "typesense-instantsearch-adapter": "^2.4.0"
   },
   "peerDependencies": {
     "react": "^16.8.4 || ^17.0.0",
     "react-dom": "^16.8.4 || ^17.0.0",
-    "@docusaurus/core": "2.0.0-beta.16",
-    "@docusaurus/theme-common": "2.0.0-beta.16"
+    "@docusaurus/core": "2.0.0-beta.17",
+    "@docusaurus/theme-common": "2.0.0-beta.17"
   },
   "engines": {
     "node": ">=12.13.0"

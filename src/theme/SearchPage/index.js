@@ -174,14 +174,14 @@ function SearchPage() {
   const typesenseInstantSearchAdapter = new TypesenseInstantSearchAdapter({
     server: typesenseServerConfig,
     additionalSearchParameters: {
-      queryBy:
+      query_by:
         'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
-      includeFields:
+      include_fields:
         'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content,anchor,url,type,id',
-      highlightFullFields:
+      highlight_full_fields:
         'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
-      groupBy: 'url',
-      groupLimit: 3,
+      group_by: 'url',
+      group_limit: 3,
       ...typesenseSearchParameters
     },
   });
