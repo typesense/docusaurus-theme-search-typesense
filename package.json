@@ -21,8 +21,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@docusaurus/utils": "2.0.0-beta.17",
-    "@docusaurus/utils-validation": "2.0.0-beta.17",
+    "@docusaurus/utils": "~2.0.0-beta.17",
+    "@docusaurus/utils-validation": "~2.0.0-beta.17",
     "algoliasearch": "^4.13.0",
     "algoliasearch-helper": "^3.7.0",
     "clsx": "^1.1.1",
@@ -34,8 +34,8 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.17.9",
-    "@docusaurus/core": "2.0.0-beta.17",
-    "@docusaurus/theme-common": "2.0.0-beta.17",
+    "@docusaurus/core": "^2.0.0-beta.17",
+    "@docusaurus/theme-common": "^2.0.0-beta.17",
     "react": "^16.8.4 || ^17.0.0",
     "react-dom": "^16.8.4 || ^17.0.0"
   },
