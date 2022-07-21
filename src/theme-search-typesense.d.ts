@@ -7,16 +7,16 @@
 
 declare module 'docusaurus-theme-search-typesense' {
   import type {DeepPartial} from 'utility-types';
-  import type { TypesenseConfigurationOptions } from 'typesense/lib/Typesense/Configuration';
-  import type { TypesenseSearchParams } from 'typesense/lib/Typesense/Documents';
+  import type {TypesenseConfigurationOptions} from 'typesense/lib/Typesense/Configuration';
+  import type {TypesenseSearchParams} from 'typesense/lib/Typesense/Documents';
 
   export type ThemeConfig = {
     typesense: {
       contextualSearch: boolean;
       externalUrlRegex?: string;
-      typesenseCollectionName: string,
-      typesenseServerConfig: TypesenseConfigurationOptions,
-      typesenseSearchParameters: TypesenseSearchParams,
+      typesenseCollectionName: string;
+      typesenseServerConfig: TypesenseConfigurationOptions;
+      typesenseSearchParameters: TypesenseSearchParams;
       searchPagePath: string | false | null;
     };
   };

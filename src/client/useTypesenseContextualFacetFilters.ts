@@ -13,10 +13,10 @@ export function useTypesenseContextualFilters(): string {
 
   const languageFilter = `language:=${locale}`;
 
-  let tagsFilter
+  let tagsFilter;
   if (tags.length > 0) {
-    tagsFilter = `docusaurus_tag:=[${tags.join(',')}]`
+    tagsFilter = `docusaurus_tag:=[${tags.join(',')}]`;
   }
 
-  return [languageFilter, tagsFilter].filter(e => e).join(' && ');
+  return [languageFilter, tagsFilter].filter((e) => e).join(' && ');
 }

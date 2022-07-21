@@ -7,14 +7,13 @@
 
 import path from 'path';
 import fs from 'fs-extra';
+import _ from 'lodash';
+import logger from '@docusaurus/logger';
 import {defaultConfig, compile} from 'eta';
 import {normalizeUrl} from '@docusaurus/utils';
 import {readDefaultCodeTranslationMessages} from '@docusaurus/theme-translations';
-import logger from '@docusaurus/logger';
 import openSearchTemplate from './templates/opensearch';
-import _ from 'lodash';
 
-// @ts-ignore
 import type {LoadContext, Plugin} from '@docusaurus/types';
 import type {ThemeConfig} from 'docusaurus-theme-search-typesense';
 
@@ -34,7 +33,9 @@ function renderOpenSearchTemplate(data: {
 
 const OPEN_SEARCH_FILENAME = 'opensearch.xml';
 
-export default function themeSearchTypesense(context: LoadContext): Plugin<void> {
+export default function themeSearchTypesense(
+  context: LoadContext,
+): Plugin<void> {
   const {
     baseUrl,
     siteConfig: {title, url, favicon, themeConfig},
@@ -48,10 +49,10 @@ export default function themeSearchTypesense(context: LoadContext): Plugin<void>
     name: 'docusaurus-theme-search-typesense',
 
     getThemePath() {
-      return path.resolve(__dirname, '../lib/theme');
+      return '../lib/theme';
     },
     getTypeScriptThemePath() {
-      return path.resolve(__dirname, '../src/theme');
+      return '../src/theme';
     },
 
     getDefaultCodeTranslationMessages() {
@@ -61,8 +62,7 @@ export default function themeSearchTypesense(context: LoadContext): Plugin<void>
       });
     },
 
-    // @ts-ignore
-    async contentLoaded({actions: {addRoute}}) {
+    contentLoaded({actions: {addRoute}}) {
       if (searchPagePath) {
         addRoute({
           path: normalizeUrl([baseUrl, searchPagePath]),
@@ -72,7 +72,6 @@ export default function themeSearchTypesense(context: LoadContext): Plugin<void>
       }
     },
 
-    // @ts-ignore
     async postBuild({outDir}) {
       if (searchPagePath) {
         const siteUrl = normalizeUrl([url, baseUrl]);

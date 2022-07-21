@@ -4,4 +4,8 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-export { useTypesenseContextualFilters } from './useTypesenseContextualFacetFilters';
+import type { DocSearchTranslations } from 'typesense-docsearch-react';
+declare const translations: DocSearchTranslations & {
+    placeholder: string;
+};
+export default translations;

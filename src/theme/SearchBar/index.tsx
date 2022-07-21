@@ -21,12 +21,15 @@ import Head from '@docusaurus/Head';
 import {isRegexpStringMatch} from '@docusaurus/theme-common';
 // @ts-ignore
 import {useSearchPage} from '@docusaurus/theme-common/internal';
-import {DocSearchButton, useDocSearchKeyboardEvents} from 'typesense-docsearch-react';
+import {
+  DocSearchButton,
+  useDocSearchKeyboardEvents,
+} from 'typesense-docsearch-react';
 import {useTypesenseContextualFilters} from '../../client';
 // @ts-ignore
 import Translate, {translate} from '@docusaurus/Translate';
 // @ts-ignore
-import styles from './styles.module.css';
+import translations from '@theme/SearchTranslations';
 
 import type {
   DocSearchModal as DocSearchModalType,
@@ -86,14 +89,16 @@ function DocSearch({
   const {siteMetadata} = useDocusaurusContext();
 
   const contextualSearchFacetFilters =
-      useTypesenseContextualFilters() as string;
+    useTypesenseContextualFilters() as string;
 
   const configFacetFilters: string =
     props.typesenseSearchParameters?.filter_by ?? '';
 
   const facetFilters = contextualSearch
     ? // Merge contextual search filters with config filters
-      [contextualSearchFacetFilters, configFacetFilters].filter(e => e).join(' && ')
+      [contextualSearchFacetFilters, configFacetFilters]
+        .filter((e) => e)
+        .join(' && ')
     : // ... or use config facetFilters
       configFacetFilters;
 
@@ -122,7 +127,9 @@ function DocSearch({
 
     return Promise.all([
       // @ts-ignore
-      import('typesense-docsearch-react/modal'),
+      import('typesense-docsearch-react/modal') as Promise<
+        typeof import('typesense-docsearch-react')
+      >,
       // @ts-ignore
       import('typesense-docsearch-react/style'),
       // @ts-ignore
@@ -149,7 +156,7 @@ function DocSearch({
   }, [setIsOpen]);
 
   const onInput = useCallback(
-    (event: { key: React.SetStateAction<string | undefined>; }) => {
+    (event: KeyboardEvent) => {
       importDocSearchModalIfNeeded().then(() => {
         setIsOpen(true);
         setInitialQuery(event.key);
@@ -173,7 +180,7 @@ function DocSearch({
   const transformItems = useRef<DocSearchModalProps['transformItems']>(
     (items) =>
       items.map((item) => {
-        // If Algolia contains a external domain, we should navigate without
+        // If result contains a external domain, we should navigate without
         // relative URL
         if (isRegexpStringMatch(externalUrlRegex, item.url)) {
           return item;
@@ -188,7 +195,6 @@ function DocSearch({
       }),
   ).current;
 
-  //@ts-ignore
   const resultsFooterComponent: DocSearchProps['resultsFooterComponent'] =
     useMemo(
       () =>
@@ -206,27 +212,16 @@ function DocSearch({
     searchButtonRef,
   });
 
-  const translatedSearchLabel = translate({
-    id: 'theme.SearchBar.label',
-    message: 'Search',
-    description: 'The ARIA label and placeholder for search button',
-  });
-
   return (
     <>
-      <div className={styles.searchBox}>
-        <DocSearchButton
-          onTouchStart={importDocSearchModalIfNeeded}
-          onFocus={importDocSearchModalIfNeeded}
-          onMouseOver={importDocSearchModalIfNeeded}
-          onClick={onOpen}
-          ref={searchButtonRef}
-          translations={{
-            buttonText: translatedSearchLabel,
-            buttonAriaLabel: translatedSearchLabel,
-          }}
-        />
-      </div>
+      <DocSearchButton
+        onTouchStart={importDocSearchModalIfNeeded}
+        onFocus={importDocSearchModalIfNeeded}
+        onMouseOver={importDocSearchModalIfNeeded}
+        onClick={onOpen}
+        ref={searchButtonRef}
+        translations={translations.button}
+      />
 
       {isOpen &&
         DocSearchModal &&
@@ -246,6 +241,8 @@ function DocSearch({
             typesenseSearchParameters={typesenseSearchParameters}
             typesenseServerConfig={typesenseServerConfig}
             typesenseCollectionName={typesenseCollectionName}
+            placeholder={translations.placeholder}
+            translations={translations.modal}
           />,
           searchContainer.current,
         )}
@@ -255,5 +252,7 @@ function DocSearch({
 
 export default function SearchBar(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
-  return <DocSearch {...(siteConfig.themeConfig.typesense as DocSearchProps)} />;
+  return (
+    <DocSearch {...(siteConfig.themeConfig.typesense as DocSearchProps)} />
+  );
 }
