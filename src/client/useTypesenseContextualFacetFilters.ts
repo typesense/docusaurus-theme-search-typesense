@@ -5,13 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { useContextualSearchFilters } from '@docusaurus/theme-common';
+// @ts-ignore Imported from peer dependency
+import {useContextualSearchFilters} from '@docusaurus/theme-common';
 
-// Translate search-engine agnostic search filters to Algolia search filters
-export default function useTypesenseContextualFilters() {
+export function useTypesenseContextualFilters(): string {
   const {locale, tags} = useContextualSearchFilters();
 
-  // seems safe to convert locale->language, see AlgoliaSearchMetadatas comment
   const languageFilter = `language:=${locale}`;
 
   let tagsFilter
