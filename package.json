@@ -2,42 +2,63 @@
   "name": "docusaurus-theme-search-typesense",
   "version": "0.4.0",
   "description": "Typesense search component for Docusaurus.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    "./client": {
+      "types": "./lib/client/index.d.ts",
+      "default": "./lib/client/index.js"
+    },
+    ".": {
+      "types": "./src/theme-search-typesense.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "types": "src/theme-search-typesense.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "repository": "typesense/docusaurus-theme-search-typesense",
-  "contributors": [
-    {
-      "name": "Facebook, Inc."
-    },
-    {
-      "name": "Typesense, Inc.",
-      "url": "https://typesense.org"
-    }
-  ],
-  "files": [
-    "src"
-  ],
   "license": "MIT",
+  "scripts": {
+    "build": "tsc --build && node copyUntypedFiles.mjs && prettier --config .prettierrc --write \"src/**/*.{js,ts,tsx,css}\"",
+    "watch": "run-p -c copy:watch build:watch",
+    "build:watch": "tsc --build --watch",
+    "copy:watch": "node copyUntypedFiles.mjs --watch"
+  },
   "dependencies": {
-    "@docusaurus/utils": "2.0.0-beta.21",
-    "@docusaurus/utils-validation": "2.0.0-beta.21",
-    "algoliasearch-helper": "^3.7.0",
-    "clsx": "^1.1.1",
-    "eta": "^1.12.1",
-    "lodash": "^4.17.20",
-    "typesense": "^1.2.2",
-    "typesense-docsearch-react": "^0.1.0",
-    "typesense-instantsearch-adapter": "^2.4.0"
+    "@docusaurus/logger": "2.0.0-rc.1",
+    "@docusaurus/plugin-content-docs": "2.0.0-rc.1",
+    "@docusaurus/theme-translations": "2.0.0-rc.1",
+    "@docusaurus/utils": "2.0.0-rc.1",
+    "@docusaurus/utils-validation": "2.0.0-rc.1",
+    "algoliasearch-helper": "^3.10.0",
+    "clsx": "^1.2.1",
+    "eta": "^1.12.3",
+    "fs-extra": "^10.1.0",
+    "lodash": "^4.17.21",
+    "tslib": "^2.4.0",
+    "typesense-docsearch-react": "^0.2.0",
+    "typesense-instantsearch-adapter": "^2.4.2-1",
+    "utility-types": "^3.10.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.0.0-rc.1",
+    "@docusaurus/types": "^2.0.0-rc.1",
+    "typescript": "^4.7.4",
+    "@types/fs-extra": "^9.0.13",
+    "@types/lodash": "^4.14.182",
+    "@types/react-dom": "^18.0.6"
   },
   "peerDependencies": {
+    "@docusaurus/core": "2.0.0-rc.1",
+    "@docusaurus/theme-common": "2.0.0-rc.1",
     "react": "^16.8.4 || ^17.0.0",
-    "react-dom": "^16.8.4 || ^17.0.0",
-    "@docusaurus/core": "2.0.0-beta.21",
-    "@docusaurus/theme-common": "2.0.0-beta.21"
+    "react-dom": "^16.8.4 || ^17.0.0"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=16.14"
   }
 }
