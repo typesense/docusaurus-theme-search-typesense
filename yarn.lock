@@ -6334,10 +6334,10 @@ typescript@^4.7.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
 
-typesense-docsearch-react@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-0.2.0.tgz#5154c5dd77e4b37431c363b97d7bb1e34c67bbf5"
-  integrity sha512-xbmdQW+PsfMNXpzvYD09289FlHo1d8KHb+fw81vG8xvxG8dd4O4usBJMRsCDXhO7uzA5HYBXws2iiOJZcjF1fA==
+typesense-docsearch-react@^0.2.1-0:
+  version "0.2.1-0"
+  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-0.2.1-0.tgz#4fce5bb709f0493ce331d71befeec4bd53378386"
+  integrity sha512-kunFPC9KCOLCOz05J1mP6AojEbytOPo6kTWOPkhcWsgoniBXGbMrtoKoFAhOAtJMVbQCdYeNf0QbxFNeDMoKWA==
   dependencies:
     "@algolia/autocomplete-core" "1.7.1"
     "@algolia/autocomplete-preset-algolia" "1.7.1"
