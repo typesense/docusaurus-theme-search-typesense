@@ -461,7 +461,7 @@ function SearchPageContent(): JSX.Element {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://typesense.org/?utm_source=${window.location.hostname}&utm_medium=referral&utm_content=powered_by&utm_campaign=docsearch`}
+              href={`https://typesense.org/?utm_medium=referral&utm_content=powered_by&utm_campaign=docsearch`}
               aria-label={translate({
                 id: 'theme.SearchPage.typesenseLabel',
                 message: 'Search by Typesense',
