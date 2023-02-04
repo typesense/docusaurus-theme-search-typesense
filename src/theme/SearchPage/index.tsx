@@ -22,11 +22,9 @@ import {
   useEvent,
   // @ts-ignore
 } from '@docusaurus/theme-common';
-import {
-  useTitleFormatter,
-  useSearchPage,
-  // @ts-ignore
-} from '@docusaurus/theme-common/internal';
+import {useSearchPage} from '../../hooks/useSearchPage';
+// @ts-ignore
+import {useTitleFormatter} from '../../utils/generalUtils';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useAllDocsData} from '@docusaurus/plugin-content-docs/client';
 import Translate, {translate} from '@docusaurus/Translate';

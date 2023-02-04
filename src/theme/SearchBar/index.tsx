@@ -20,7 +20,7 @@ import Head from '@docusaurus/Head';
 // @ts-ignore
 import {isRegexpStringMatch} from '@docusaurus/theme-common';
 // @ts-ignore
-import {useSearchPage} from '@docusaurus/theme-common/internal';
+import {useSearchPage} from '../../hooks/useSearchPage';
 import {
   DocSearchButton,
   useDocSearchKeyboardEvents,
