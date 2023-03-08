@@ -229,6 +229,7 @@ function SearchPageContent(): JSX.Element {
         'hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content',
       group_by: 'url',
       group_limit: 3,
+      highlight_affix_num_tokens: 50,
       ...typesenseSearchParameters,
     },
   });
