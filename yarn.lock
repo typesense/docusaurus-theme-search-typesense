@@ -6396,10 +6396,10 @@ typesense-docsearch-css@^0.4.0:
   resolved "https://registry.yarnpkg.com/typesense-docsearch-css/-/typesense-docsearch-css-0.4.0.tgz#3a91d379848c63f87e5d68a5855d09e35ff8996c"
   integrity sha512-hVTJC1Rg2BnNB4kl2Qi4GcgjFmPZY8YGu0aJ5V6iM6vK62yvtE7jObnAc1maYOp33NWFVLPgl/9PlBfWBlN0Dw==
 
-typesense-docsearch-react@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-0.3.0.tgz#da8f160096218e76bedd2a073960c080dab1a81e"
-  integrity sha512-K2mO0KDUQIXlwPyybuEX+l39MLMA8fsReai/+UukXiJ3iOlT0LfEbH5IX7gb+FgxdGyNyB+DgTuEHEcy5Mi1gQ==
+typesense-docsearch-react@^3.4.0-8:
+  version "3.4.0-8"
+  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-3.4.0-8.tgz#b0f33f4a46c1b126ec9e8484381ac3b7a2a74a5c"
+  integrity sha512-8tk9WyGDW2U8EigEYARAoiyx2DOcherR5c/KWF1RfSMMVbyxi6oYgzS6SbtS789JsejFLzgFKRSDEV/IZTt2Bg==
   dependencies:
     "@algolia/autocomplete-core" "1.8.2"
     "@algolia/autocomplete-preset-algolia" "1.8.2"
