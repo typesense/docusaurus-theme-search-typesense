@@ -6391,48 +6391,33 @@ typescript@^4.7.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
 
-typesense-docsearch-css@^0.4.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/typesense-docsearch-css/-/typesense-docsearch-css-0.4.0.tgz#3a91d379848c63f87e5d68a5855d09e35ff8996c"
-  integrity sha512-hVTJC1Rg2BnNB4kl2Qi4GcgjFmPZY8YGu0aJ5V6iM6vK62yvtE7jObnAc1maYOp33NWFVLPgl/9PlBfWBlN0Dw==
+typesense-docsearch-css@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/typesense-docsearch-css/-/typesense-docsearch-css-0.4.1.tgz#457d4ad2d63021c7cc6e12081c378c0367a891c0"
+  integrity sha512-mN8K18pfIpCrhzsMAJBzoS7l/YDcC4P3f9vsScenUceXmC8n3FCPldmF10dKDJmK3Lr7aAScQt70jCA5126y2w==
 
-typesense-docsearch-react@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-3.4.0.tgz#875dce97ae6ac71604ca245ca69993a7e6e0e2f2"
-  integrity sha512-87M0ktGiSmJ4m9VpJKC3gD6w31ZhctdB34c6aguLJXsiLDydNF+ipBYuCYE26D47rx/KLk82rsiZwovjaagZnw==
+typesense-docsearch-react@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/typesense-docsearch-react/-/typesense-docsearch-react-3.4.1.tgz#754d52472bb9b19a91d213f575d7cc06a58a0878"
+  integrity sha512-d0PQym/B/p5oP+hfdFEOH6goiKa1JLR63bikZSDGq1+jT2FtuwNrdMGVBZZMNFUsXVsJRA8ULHJpsREmfSJmVw==
   dependencies:
     "@algolia/autocomplete-core" "1.8.2"
     "@algolia/autocomplete-preset-algolia" "1.8.2"
-    typesense "^1.4.0-3"
-    typesense-docsearch-css "^0.4.0"
-    typesense-instantsearch-adapter "^2.4.2-1"
+    typesense "^1.7.2"
+    typesense-docsearch-css "^0.4.1"
+    typesense-instantsearch-adapter "^2.7.1"
 
-typesense-instantsearch-adapter@^2.4.2-1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/typesense-instantsearch-adapter/-/typesense-instantsearch-adapter-2.4.2.tgz#80df6e96bb01ef07609c84ef06e648937f46b882"
-  integrity sha512-2pAeKwAHEOVwNpQQhcc4sOzL7I6zIQmo09qR+fs0Y5r8l7Zg/4KvxuwIWjAJJtQVeJFAmFqkk8ylxLRkrZs4ng==
+typesense-instantsearch-adapter@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/typesense-instantsearch-adapter/-/typesense-instantsearch-adapter-2.7.1.tgz#d2912196d3f1e29c5f967a54213b1aaa3d0cb6b4"
+  integrity sha512-GSEwkNzXoVcL4iSV/LDiZvjx/knctqfGLLKUNRe5twgzFprnoU07UUh2mQ5Z0/aP1moY/UpBF1bMKhTU6ECoAQ==
   dependencies:
-    typesense "^1.4.1"
+    typesense "^1.7.0"
 
-typesense-instantsearch-adapter@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/typesense-instantsearch-adapter/-/typesense-instantsearch-adapter-2.6.0.tgz#dfe7a4ea8c3c302cdef57f9c0fa7cb04c47f4051"
-  integrity sha512-Z9+L5ba/xodoI3urhyS4rKFQiG98dClhOgUfpNj8oP+w5trqBhqwbJLPPScXwzlmCJWUULPQ5786anGjGMNuxQ==
-  dependencies:
-    typesense "^1.5.3"
-
-typesense@^1.4.0-3, typesense@^1.4.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/typesense/-/typesense-1.5.1.tgz#320f95669f163d969aed8c557b75e933fafdac8d"
-  integrity sha512-e2J1phWm9K85KPJE1YoUzYD1yXEbSefFKG9TCK9G5U7a68ixVjcyVH0eREKDEobXVcULJLTqSoKILdEyXEAiJA==
-  dependencies:
-    axios "^0.26.0"
-    loglevel "^1.8.0"
-
-typesense@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/typesense/-/typesense-1.5.3.tgz#85aa8fcd6904ca5532bde5df0e83a38621de2026"
-  integrity sha512-eLHBP6AHex04tT+q/a7Uc+dFjIuoKTRpvlsNJwVTyedh4n0qnJxbfoLJBCxzhhZn5eITjEK0oWvVZ5byc3E+Ww==
+typesense@^1.7.0, typesense@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/typesense/-/typesense-1.7.2.tgz#d62351f56486db43a9f48b4d354801b9e5fb95e9"
+  integrity sha512-hgQESOiyNJq+w2mpRJa/a1UMhWtJ/+sb0p7NoeCDSkikm9sasisJdnc7uhQchM6vTWKw2sMLWUBNbAhItR6zUQ==
   dependencies:
     axios "^0.26.0"
     loglevel "^1.8.0"

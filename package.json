@@ -40,8 +40,8 @@
     "fs-extra": "^10.1.0",
     "lodash": "^4.17.21",
     "tslib": "^2.4.0",
-    "typesense-docsearch-react": "^3.4.0",
-    "typesense-instantsearch-adapter": "^2.6.0",
+    "typesense-docsearch-react": "^3.4.1",
+    "typesense-instantsearch-adapter": "^2.7.1",
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
