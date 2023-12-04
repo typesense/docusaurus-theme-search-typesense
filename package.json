@@ -29,11 +29,11 @@
     "copy:watch": "node copyUntypedFiles.mjs --watch"
   },
   "dependencies": {
-    "@docusaurus/logger": "3.0.0",
-    "@docusaurus/plugin-content-docs": "3.0.0",
-    "@docusaurus/theme-translations": "3.0.0",
-    "@docusaurus/utils": "3.0.0",
-    "@docusaurus/utils-validation": "3.0.0",
+    "@docusaurus/logger": "3.0.1",
+    "@docusaurus/plugin-content-docs": "3.0.1",
+    "@docusaurus/theme-translations": "3.0.1",
+    "@docusaurus/utils": "3.0.1",
+    "@docusaurus/utils-validation": "3.0.1",
     "algoliasearch-helper": "^3.10.0",
     "clsx": "^1.2.1",
     "eta": "^2.0.0",
@@ -45,16 +45,16 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.0.0",
-    "@docusaurus/types": "^3.0.0",
+    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/types": "^3.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.182",
     "@types/react-dom": "^18.0.6",
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/theme-common": "3.0.0",
+    "@docusaurus/core": "3.0.1",
+    "@docusaurus/theme-common": "3.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
