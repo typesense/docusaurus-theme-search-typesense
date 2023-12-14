@@ -26,7 +26,8 @@
     "build": "tsc --build && node copyUntypedFiles.mjs && prettier --config .prettierrc --write \"src/**/*.{js,ts,tsx,css}\"",
     "watch": "run-p -c copy:watch build:watch",
     "build:watch": "tsc --build --watch",
-    "copy:watch": "node copyUntypedFiles.mjs --watch"
+    "copy:watch": "node copyUntypedFiles.mjs --watch",
+    "test": "echo 'No Tests Founds'"
   },
   "dependencies": {
     "@docusaurus/logger": "3.0.1",
