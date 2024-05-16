@@ -30,11 +30,11 @@
     "test": "echo 'No Tests Founds'"
   },
   "dependencies": {
-    "@docusaurus/logger": "3.2.1",
-    "@docusaurus/plugin-content-docs": "3.2.1",
-    "@docusaurus/theme-translations": "3.2.1",
-    "@docusaurus/utils": "3.2.1",
-    "@docusaurus/utils-validation": "3.2.1",
+    "@docusaurus/logger": "3.3.2",
+    "@docusaurus/plugin-content-docs": "3.3.2",
+    "@docusaurus/theme-translations": "3.3.2",
+    "@docusaurus/utils": "3.3.2",
+    "@docusaurus/utils-validation": "3.3.2",
     "algoliasearch-helper": "^3.10.0",
     "clsx": "^1.2.1",
     "eta": "^2.0.0",
@@ -46,16 +46,16 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.2.1",
-    "@docusaurus/types": "^3.2.1",
+    "@docusaurus/module-type-aliases": "3.3.2",
+    "@docusaurus/types": "^3.3.2",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.182",
     "@types/react-dom": "^18.0.6",
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "@docusaurus/core": "3.2.1",
-    "@docusaurus/theme-common": "3.2.1",
+    "@docusaurus/core": "3.3.2",
+    "@docusaurus/theme-common": "3.3.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
