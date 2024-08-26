@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-theme-search-typesense",
-  "version": "0.21.0",
+  "version": "0.21.0-0",
   "description": "Typesense search component for Docusaurus.",
   "main": "lib/index.js",
   "sideEffects": [
@@ -30,11 +30,11 @@
     "test": "echo 'No Tests Founds'"
   },
   "dependencies": {
-    "@docusaurus/logger": "^3.4.0",
-    "@docusaurus/plugin-content-docs": "^3.4.0",
-    "@docusaurus/theme-translations": "^3.4.0",
-    "@docusaurus/utils": "^3.4.0",
-    "@docusaurus/utils-validation": "^3.4.0",
+    "@docusaurus/logger": "^3.5.2",
+    "@docusaurus/plugin-content-docs": "^3.5.2",
+    "@docusaurus/theme-translations": "^3.5.2",
+    "@docusaurus/utils": "^3.5.2",
+    "@docusaurus/utils-validation": "^3.5.2",
     "algoliasearch-helper": "^3.10.0",
     "clsx": "^1.2.1",
     "eta": "^2.0.0",
@@ -46,8 +46,8 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.4.0",
-    "@docusaurus/types": "^3.4.0",
+    "@docusaurus/module-type-aliases": "^3.5.2",
+    "@docusaurus/types": "^3.5.2",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.182",
     "@types/react-dom": "^18.0.6",

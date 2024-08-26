@@ -1167,9 +1167,9 @@
     postcss-sort-media-queries "^5.2.0"
     tslib "^2.6.0"
 
-"@docusaurus/logger@3.5.2", "@docusaurus/logger@^3.4.0":
+"@docusaurus/logger@3.5.2", "@docusaurus/logger@^3.5.2":
   version "3.5.2"
-  resolved "https://registry.npmjs.org/@docusaurus/logger/-/logger-3.5.2.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/logger/-/logger-3.5.2.tgz#1150339ad56844b30734115c19c580f3b25cf5ed"
   integrity sha512-LHC540SGkeLfyT3RHK3gAMK6aS5TRqOD4R72BEU/DE2M/TY8WwEUAMY576UUc/oNJXv8pGhBmQB6N9p3pt8LQw==
   dependencies:
     chalk "^4.1.2"
@@ -1205,7 +1205,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.5.2", "@docusaurus/module-type-aliases@^3.4.0":
+"@docusaurus/module-type-aliases@3.5.2", "@docusaurus/module-type-aliases@^3.5.2":
   version "3.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/module-type-aliases/-/module-type-aliases-3.5.2.tgz"
   integrity sha512-Z+Xu3+2rvKef/YKTMxZHsEXp1y92ac0ngjDiExRdqGTmEKtCUpkbNYH8v5eXo5Ls+dnW88n6WTa+Q54kLOkwPg==
@@ -1218,9 +1218,9 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
-"@docusaurus/plugin-content-docs@^3.4.0":
+"@docusaurus/plugin-content-docs@^3.5.2":
   version "3.5.2"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-content-docs/-/plugin-content-docs-3.5.2.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-docs/-/plugin-content-docs-3.5.2.tgz#adcf6c0bd9a9818eb192ab831e0069ee62d31505"
   integrity sha512-Bt+OXn/CPtVqM3Di44vHjE7rPCEsRCB/DMo2qoOuozB9f7+lsdrHvD0QCHdBs0uhz6deYJDppAr2VgqybKPlVQ==
   dependencies:
     "@docusaurus/core" "3.5.2"
@@ -1259,15 +1259,15 @@
     tslib "^2.6.0"
     utility-types "^3.10.0"
 
-"@docusaurus/theme-translations@^3.4.0":
+"@docusaurus/theme-translations@^3.5.2":
   version "3.5.2"
-  resolved "https://registry.npmjs.org/@docusaurus/theme-translations/-/theme-translations-3.5.2.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-translations/-/theme-translations-3.5.2.tgz#38f9ebf2a5d860397022206a05fef66c08863c89"
   integrity sha512-GPZLcu4aT1EmqSTmbdpVrDENGR2yObFEX8ssEFYTCiAIVc0EihNSdOIBTazUvgNqwvnoU1A8vIs1xyzc3LITTw==
   dependencies:
     fs-extra "^11.1.1"
     tslib "^2.6.0"
 
-"@docusaurus/types@3.5.2", "@docusaurus/types@^3.4.0":
+"@docusaurus/types@3.5.2", "@docusaurus/types@^3.5.2":
   version "3.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/types/-/types-3.5.2.tgz"
   integrity sha512-N6GntLXoLVUwkZw7zCxwy9QiuEXIcTVzA9AkmNw16oc0AP3SXLrMmDMMBIfgqwuKWa6Ox6epHol9kMtJqekACw==
@@ -1289,7 +1289,7 @@
   dependencies:
     tslib "^2.6.0"
 
-"@docusaurus/utils-validation@3.5.2", "@docusaurus/utils-validation@^3.4.0":
+"@docusaurus/utils-validation@3.5.2", "@docusaurus/utils-validation@^3.5.2":
   version "3.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/utils-validation/-/utils-validation-3.5.2.tgz"
   integrity sha512-m+Foq7augzXqB6HufdS139PFxDC5d5q2QKZy8q0qYYvGdI6nnlNsGH4cIGsgBnV7smz+mopl3g4asbSDvMV0jA==
@@ -1303,7 +1303,7 @@
     lodash "^4.17.21"
     tslib "^2.6.0"
 
-"@docusaurus/utils@3.5.2", "@docusaurus/utils@^3.4.0":
+"@docusaurus/utils@3.5.2", "@docusaurus/utils@^3.5.2":
   version "3.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/utils/-/utils-3.5.2.tgz"
   integrity sha512-33QvcNFh+Gv+C2dP9Y9xWEzMgf3JzrpL2nW9PopidiohS1nDcyknKRx2DWaFvyVTTYIkkABVSr073VTj/NITNA==
