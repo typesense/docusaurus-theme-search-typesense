@@ -12,7 +12,7 @@ Think of it as an open source alternative to Algolia and an easier-to-use, batte
 
 ## Documentation
 
-Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: https://typesense.org/guide/docsearch.html.
+Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: [https://typesense.org/docs/guide/docsearch.html](https://typesense.org/docs/guide/docsearch.html).
 
 ## Help
 
