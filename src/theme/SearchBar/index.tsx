@@ -40,6 +40,7 @@ import type {
   StoredDocSearchHit,
 } from 'typesense-docsearch-react/dist/esm/types';
 import type {AutocompleteState} from '@algolia/autocomplete-core';
+import { DocsPreferredVersionContextProvider } from '@docusaurus/plugin-content-docs/lib/client/index.js';
 
 type DocSearchProps = Omit<
   DocSearchModalProps,
@@ -254,6 +255,8 @@ function DocSearch({
 export default function SearchBar(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <DocSearch {...(siteConfig.themeConfig.typesense as DocSearchProps)} />
+    <DocsPreferredVersionContextProvider>
+      <DocSearch {...(siteConfig.themeConfig.typesense as DocSearchProps)} />
+    </DocsPreferredVersionContextProvider>
   );
 }
