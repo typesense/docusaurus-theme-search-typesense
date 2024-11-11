@@ -11,6 +11,7 @@ import React, {useEffect, useState, useReducer, useRef} from 'react';
 import clsx from 'clsx';
 
 import algoliaSearchHelper from 'algoliasearch-helper';
+import type {SearchParameters} from 'algoliasearch-helper';
 
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
@@ -233,14 +234,18 @@ function SearchPageContent(): JSX.Element {
       ...typesenseSearchParameters,
     },
   });
+
+  // Needed this to avoid a typescript error in algoliaSearchHelper
+  const searchParams: Partial<SearchParameters> = {
+    hitsPerPage: 15,
+    advancedSyntax: true,
+    disjunctiveFacets: ['language', 'docusaurus_tag'],
+  };
+
   const algoliaHelper = algoliaSearchHelper(
     typesenseInstantSearchAdapter.searchClient,
     typesenseCollectionName,
-    {
-      hitsPerPage: 15,
-      advancedSyntax: true,
-      disjunctiveFacets: ['language', 'docusaurus_tag'],
-    },
+    searchParams,
   );
 
   algoliaHelper.on(
