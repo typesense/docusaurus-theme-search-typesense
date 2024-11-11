@@ -39,7 +39,7 @@
     "importsNotUsedAsValues": "remove",
 
     /* Module Resolution */
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
