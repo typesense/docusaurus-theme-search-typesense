@@ -11,6 +11,7 @@ import React, {useEffect, useState, useReducer, useRef} from 'react';
 import clsx from 'clsx';
 
 import algoliaSearchHelper from 'algoliasearch-helper';
+import type {SearchParameters} from 'algoliasearch-helper';
 
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
@@ -233,17 +234,18 @@ function SearchPageContent(): JSX.Element {
       ...typesenseSearchParameters,
     },
   });
+
+  // Needed this to avoid a typescript error in algoliaSearchHelper
+  const searchParams: Partial<SearchParameters> = {
+    hitsPerPage: 15,
+    advancedSyntax: true,
+    disjunctiveFacets: ['language', 'docusaurus_tag'],
+  };
+
   const algoliaHelper = algoliaSearchHelper(
     typesenseInstantSearchAdapter.searchClient,
     typesenseCollectionName,
-    {
-      // Source: https://github.com/facebook/docusaurus/blob/0c8635529ee964401f441030c8db869711f87227/packages/docusaurus-theme-search-algolia/src/theme/SearchPage/index.tsx#L224C5-L225C66
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore: why errors happens after upgrading to TS 5.5 ?
-      hitsPerPage: 15,
-      advancedSyntax: true,
-      disjunctiveFacets: ['language', 'docusaurus_tag'],
-    },
+    searchParams,
   );
 
   algoliaHelper.on(
