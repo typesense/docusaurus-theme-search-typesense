@@ -237,6 +237,9 @@ function SearchPageContent(): JSX.Element {
     typesenseInstantSearchAdapter.searchClient,
     typesenseCollectionName,
     {
+      // Source: https://github.com/facebook/docusaurus/blob/0c8635529ee964401f441030c8db869711f87227/packages/docusaurus-theme-search-algolia/src/theme/SearchPage/index.tsx#L224C5-L225C66
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore: why errors happens after upgrading to TS 5.5 ?
       hitsPerPage: 15,
       advancedSyntax: true,
       disjunctiveFacets: ['language', 'docusaurus_tag'],

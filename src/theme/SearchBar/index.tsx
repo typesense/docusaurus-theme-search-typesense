@@ -40,7 +40,7 @@ import type {
   StoredDocSearchHit,
 } from 'typesense-docsearch-react/dist/esm/types';
 import type {AutocompleteState} from '@algolia/autocomplete-core';
-import { DocsPreferredVersionContextProvider } from '@docusaurus/plugin-content-docs/lib/client/index.js';
+import {DocsPreferredVersionContextProvider} from '@docusaurus/plugin-content-docs/lib/client/index.js';
 
 type DocSearchProps = Omit<
   DocSearchModalProps,
