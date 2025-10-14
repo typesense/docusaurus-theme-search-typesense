@@ -1360,7 +1360,7 @@
     webpack "^5.95.0"
     webpackbar "^6.0.1"
 
-"@docusaurus/core@3.9.1":
+"@docusaurus/core@3.9.1", "@docusaurus/core@~3.9.0":
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-3.9.1.tgz#be4d859464fee8889794d8527f884e931d591f2e"
   integrity sha512-FWDk1LIGD5UR5Zmm9rCrXRoxZUgbwuP6FBA7rc50DVfzqDOMkeMe3NyJhOsA2dF0zBE3VbHEIMmTjKwTZJwbaA==
