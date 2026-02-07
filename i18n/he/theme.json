@@ -1,0 +1,38 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "תוצאות חיפוש עבור \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "חיפוש בתיעוד",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "נמצא מסמך אחד|נמצאו {count} מסמכים|נמצאו {count} מסמכים|נמצאו {count} מסמכים",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "הקלד את החיפוש שלך כאן",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "חיפוש",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.typesenseLabel": {
+    "message": "חיפוש על ידי Typesense",
+    "description": "The ARIA label for Typesense mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "לא נמצאו תוצאות",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "מאחזר תוצאות חדשות...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchPage.breadcrumbs.ariaLabel": {
+    "message": "ניווט פירורי לחם",
+    "description": "The ARIA label for breadcrumbs navigation"
+  }
+}

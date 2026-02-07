@@ -514,7 +514,11 @@ function SearchPageContent(): JSX.Element {
                   </h2>
 
                   {breadcrumbs.length > 0 && (
-                    <nav aria-label="breadcrumbs">
+                    <nav aria-label={translate({
+                      id: 'theme.SearchPage.breadcrumbs.ariaLabel',
+                      message: 'Breadcrumbs',
+                      description: 'The ARIA label for breadcrumbs navigation',
+                    })}>
                       <ul
                         className={clsx(
                           'breadcrumbs',

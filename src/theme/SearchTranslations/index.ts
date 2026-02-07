@@ -133,7 +133,7 @@ const translations: DocSearchTranslations & {placeholder: string} = {
       searchByText: translate({
         id: 'theme.SearchModal.footer.searchByText',
         message: 'Search by',
-        description: 'The text explain that the search is making by Algolia',
+        description: 'The text explain that the search is making by Typesense',
       }),
     },
     noResultsScreen: {

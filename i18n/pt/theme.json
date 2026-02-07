@@ -1,0 +1,38 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Resultados da busca para \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Buscar na documentação",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Um documento encontrado|{count} documentos encontrados|{count} documentos encontrados",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Digite sua busca aqui",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Buscar",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.typesenseLabel": {
+    "message": "Busca por Typesense",
+    "description": "The ARIA label for Typesense mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Nenhum resultado foi encontrado",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Buscando novos resultados...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchPage.breadcrumbs.ariaLabel": {
+    "message": "Navegação por migalhas de pão",
+    "description": "The ARIA label for breadcrumbs navigation"
+  }
+}

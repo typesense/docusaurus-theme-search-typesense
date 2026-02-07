@@ -1,0 +1,38 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "نتایج جستجو برای \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "جستجو در مستندات",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "یک سند پیدا شد|{count} سند پیدا شد",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "عبارت خود را برای جستجو تایپ کنید",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "جستجو",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.typesenseLabel": {
+    "message": "جستجو توسط Typesense",
+    "description": "The ARIA label for Typesense mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "هیچ نتیجه‌ای پیدا نشد",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "در حال دریافت نتایج جدید...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchPage.breadcrumbs.ariaLabel": {
+    "message": "مسیر راهنما",
+    "description": "The ARIA label for breadcrumbs navigation"
+  }
+}
