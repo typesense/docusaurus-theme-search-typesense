@@ -1,6 +1,6 @@
 {
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Résultats de recherche pour \"{query}\"",
+    "message": "Résultats de recherche pour \"{جستجو}\"",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
@@ -8,8 +8,8 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "Un document trouvé|{count} documents trouvés",
-    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "Un document trouvé|{تعداد} documents trouvés",
+    "description": "Pluralized label for \"{تعداد} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.inputPlaceholder": {
     "message": "Tapez votre recherche ici",

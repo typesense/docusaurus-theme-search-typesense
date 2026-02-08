@@ -46,9 +46,9 @@ function useDocumentsFoundPlural() {
           id: 'theme.SearchPage.documentsFound.plurals',
           description:
             'Pluralized label for "{count} documents found". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'یک سند پیدا شد|{count} سند پیدا شد',
+          message: 'یک سند پیدا شد|{تعداد} سند پیدا شد',
         },
-        {count},
+        {تعداد: count},
       ),
     );
 }
@@ -340,11 +340,11 @@ function SearchPageContent(): JSX.Element {
       ? translate(
           {
             id: 'theme.SearchPage.existingResultsTitle',
-            message: 'نتایج جستجو برای "{query}"',
+            message: 'نتایج جستجو برای "{جستجو}"',
             description: 'The search page title for non-empty query',
           },
           {
-            query: searchQuery,
+            جستجو: searchQuery,
           },
         )
       : translate({

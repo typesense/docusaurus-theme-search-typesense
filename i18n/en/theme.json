@@ -1,10 +1,10 @@
 {
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "One document found|{count} documents found",
+    "message": "One document found|{تعداد} documents found",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "Search results for \"{جستجو}\"",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
@@ -40,7 +40,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchBar.seeAll": {
-    "message": "See all {count} results",
+    "message": "See all {تعداد} results",
     "description": "The link to see all search results"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
