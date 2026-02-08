@@ -1,6 +1,6 @@
 {
   "theme.SearchPage.existingResultsTitle": {
-    "message": "搜索\"{جستجو}\"的结果",
+    "message": "搜索\"{query}\"的结果",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
@@ -8,8 +8,8 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "找到1个文档|找到{تعداد}个文档",
-    "description": "Pluralized label for \"{تعداد} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "找到1个文档|找到{count}个文档",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.inputPlaceholder": {
     "message": "在此输入搜索内容",

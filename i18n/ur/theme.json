@@ -1,6 +1,6 @@
 {
   "theme.SearchPage.existingResultsTitle": {
-    "message": "\"{جستجو}\" کی تلاش کے نتائج",
+    "message": "\"{query}\" کی تلاش کے نتائج",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
@@ -8,8 +8,8 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "ایک دستاویز ملی|{تعداد} دستاویزات ملیں|{تعداد} دستاویزات",
-    "description": "Pluralized label for \"{تعداد} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "ایک دستاویز ملی|{count} دستاویزات ملیں|{count} دستاویزات",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.inputPlaceholder": {
     "message": "اپنی تلاش یہاں لکھیں",

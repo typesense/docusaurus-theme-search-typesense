@@ -75,8 +75,8 @@ function ResultsFooter({state, onClose}: ResultsFooterProps) {
     <Link to={generateSearchPageLink(state.query)} onClick={onClose}>
       <Translate
         id="theme.SearchBar.seeAll"
-        values={{تعداد: state.context.nbHits}}>
-        {'مشاهده همه {تعداد} نتیجه'}
+        values={{count: state.context.nbHits}}>
+        {'مشاهده همه {count} نتیجه'}
       </Translate>
     </Link>
   );

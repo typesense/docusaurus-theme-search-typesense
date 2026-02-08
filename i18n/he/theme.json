@@ -1,6 +1,6 @@
 {
   "theme.SearchPage.existingResultsTitle": {
-    "message": "תוצאות חיפוש עבור \"{جستجو}\"",
+    "message": "תוצאות חיפוש עבור \"{query}\"",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
@@ -8,8 +8,8 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "נמצא מסמך אחד|נמצאו {تعداد} מסמכים|נמצאו {تعداد} מסמכים|נמצאו {تعداد} מסמכים",
-    "description": "Pluralized label for \"{تعداد} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "נמצא מסמך אחד|נמצאו {count} מסמכים|נמצאו {count} מסמכים|נמצאו {count} מסמכים",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.inputPlaceholder": {
     "message": "הקלד את החיפוש שלך כאן",
