@@ -427,7 +427,7 @@ function SearchPageContent(): JSX.Element {
               className={styles.searchQueryInput}
               placeholder={translate({
                 id: 'theme.SearchPage.inputPlaceholder',
-                message: 'عبارت خود را برای جستجو اینجا تایپ کنید',
+                message: 'عبارت خود را برای جستجو تایپ کنید',
                 description: 'The placeholder for search page input',
               })}
               aria-label={translate({

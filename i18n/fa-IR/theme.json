@@ -12,7 +12,7 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "عبارت خود را برای جستجو اینجا تایپ کنید",
+    "message": "عبارت خود را برای جستجو تایپ کنید",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
