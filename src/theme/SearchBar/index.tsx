@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState, useRef, useCallback, useMemo} from 'react';
+import React, {useState, useRef, useCallback, useMemo, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 // @ts-ignore
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -87,7 +87,16 @@ function DocSearch({
   externalUrlRegex,
   ...props
 }: DocSearchProps) {
-  const {siteMetadata} = useDocusaurusContext();
+  const {siteMetadata, i18n} = useDocusaurusContext();
+
+  // Log i18n values from Docusaurus context for testing
+  useEffect(() => {
+    console.log('[docusaurus-theme-search-typesense] i18n values from Docusaurus context:');
+    console.log('  currentLocale:', i18n?.currentLocale);
+    console.log('  locales:', i18n?.locales);
+    console.log('  defaultLocale:', i18n?.defaultLocale);
+    console.log('  full i18n object:', i18n);
+  }, [i18n?.currentLocale, i18n]);
 
   const contextualSearchFacetFilters =
     useTypesenseContextualFilters() as string;
