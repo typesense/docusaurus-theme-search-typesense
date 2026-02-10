@@ -40,39 +40,36 @@ export function useCurrentLocale(): string {
   const fromContext = i18n?.currentLocale;
   const fromConfig = themeConfig?.typesense?.localeOverride;
 
-  const [clientLocale, setClientLocale] = useState<string | null>(null);
+  const [docLang, setDocLang] = useState<string | null>(null);
+  const [winLocale, setWinLocale] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof document === 'undefined' && typeof window === 'undefined') {
       return;
     }
-    const docLang =
-      typeof document !== 'undefined'
-        ? document.documentElement?.lang || null
-        : null;
-    const winLocale =
-      typeof window !== 'undefined'
-        ? (window.__SEARCH_THEME_LOCALE__ ?? window.env?.LOCALE) || null
-        : null;
-    const fromClient = docLang || winLocale;
-    setClientLocale(fromClient);
+    if (typeof document !== 'undefined') {
+      setDocLang(document.documentElement?.lang || null);
+    }
+    if (typeof window !== 'undefined') {
+      setWinLocale(
+        (window.__SEARCH_THEME_LOCALE__ ?? window.env?.LOCALE) || null,
+      );
+    }
   }, []);
 
   const locale =
-    fromContext || clientLocale || fromConfig || DEFAULT_LOCALE;
+    fromContext || docLang || fromConfig || winLocale || DEFAULT_LOCALE;
 
   useEffect(() => {
     let source: LocaleSource = 'default';
     if (fromContext) {
       source = 'context';
-    } else if (clientLocale) {
-      source =
-        typeof document !== 'undefined' &&
-        document.documentElement?.lang === clientLocale
-          ? 'document'
-          : 'window';
+    } else if (docLang) {
+      source = 'document';
     } else if (fromConfig) {
       source = 'config';
+    } else if (winLocale) {
+      source = 'window';
     }
     console.log(
       '[docusaurus-theme-search-typesense] locale:',
@@ -80,7 +77,7 @@ export function useCurrentLocale(): string {
       '| source:',
       source,
     );
-  }, [locale, fromContext, clientLocale, fromConfig]);
+  }, [locale, fromContext, docLang, fromConfig, winLocale]);
 
   return locale;
 }

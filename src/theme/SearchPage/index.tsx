@@ -47,7 +47,7 @@ function useDocumentsFoundPlural() {
           id: 'theme.SearchPage.documentsFound.plurals',
           description:
             'Pluralized label for "{count} documents found". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'یک سند پیدا شد|{count} سند پیدا شد',
+          message: 'One document found|{count} documents found',
         },
         {count},
       ),
@@ -341,7 +341,7 @@ function SearchPageContent(): JSX.Element {
       ? translate(
           {
             id: 'theme.SearchPage.existingResultsTitle',
-            message: 'نتایج جستجو برای "{query}"',
+            message: 'Search results for "{query}"',
             description: 'The search page title for non-empty query',
           },
           {
@@ -350,7 +350,7 @@ function SearchPageContent(): JSX.Element {
         )
       : translate({
           id: 'theme.SearchPage.emptyResultsTitle',
-          message: 'جستجو در مستندات',
+          message: 'Search the documentation',
           description: 'The search page title for empty query',
         });
 
@@ -428,12 +428,12 @@ function SearchPageContent(): JSX.Element {
               className={styles.searchQueryInput}
               placeholder={translate({
                 id: 'theme.SearchPage.inputPlaceholder',
-                message: 'عبارت خود را برای جستجو تایپ کنید',
+                message: 'Type your search query',
                 description: 'The placeholder for search page input',
               })}
               aria-label={translate({
                 id: 'theme.SearchPage.inputLabel',
-                message: 'جستجو',
+                message: 'Search',
                 description: 'The ARIA label for search page input',
               })}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -469,7 +469,7 @@ function SearchPageContent(): JSX.Element {
               href={`https://typesense.org/?utm_medium=referral&utm_content=powered_by&utm_campaign=docsearch`}
               aria-label={translate({
                 id: 'theme.SearchPage.typesenseLabel',
-                message: 'جستجو توسط Typesense',
+                message: 'Search powered by Typesense',
                 description: 'The ARIA label for Typesense mention',
               })}>
               <svg
@@ -517,7 +517,7 @@ function SearchPageContent(): JSX.Element {
                   {breadcrumbs.length > 0 && (
                     <nav aria-label={translate({
                       id: 'theme.SearchPage.breadcrumbs.ariaLabel',
-                      message: 'مسیر راهنما',
+                      message: 'Breadcrumbs',
                       description: 'The ARIA label for breadcrumbs navigation',
                     })}>
                       <ul
@@ -557,7 +557,7 @@ function SearchPageContent(): JSX.Element {
                 <Translate
                   id="theme.SearchPage.noResultsText"
                   description="The paragraph for empty search result">
-                  هیچ نتیجه‌ای پیدا نشد
+                  No results were found
                 </Translate>
               </p>
             ),
@@ -572,7 +572,7 @@ function SearchPageContent(): JSX.Element {
             <Translate
               id="theme.SearchPage.fetchingNewResults"
               description="The paragraph for fetching new search results">
-              در حال دریافت نتایج جدید...
+              Fetching new results...
             </Translate>
           </div>
         )}

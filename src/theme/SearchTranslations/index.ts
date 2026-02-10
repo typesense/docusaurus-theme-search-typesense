@@ -9,16 +9,21 @@ import {translate} from '@docusaurus/Translate';
 
 import type {DocSearchTranslations} from 'typesense-docsearch-react';
 
+/**
+ * Default messages are in English so that when locale is "en" (or no translation
+ * is found), the UI shows English. For other locales (e.g. fa), Docusaurus loads
+ * from i18n/<locale>/theme.json.
+ */
 const translations: DocSearchTranslations & {placeholder: string} = {
   button: {
     buttonText: translate({
       id: 'theme.SearchBar.label',
-      message: 'جستجو',
+      message: 'Search',
       description: 'The ARIA label and placeholder for search button',
     }),
     buttonAriaLabel: translate({
       id: 'theme.SearchBar.label',
-      message: 'جستجو',
+      message: 'Search',
       description: 'The ARIA label and placeholder for search button',
     }),
   },
@@ -26,145 +31,145 @@ const translations: DocSearchTranslations & {placeholder: string} = {
     searchBox: {
       resetButtonTitle: translate({
         id: 'theme.SearchModal.searchBox.resetButtonTitle',
-        message: 'پاک کردن عبارت جستجو',
+        message: 'Clear the search query',
         description: 'The label and ARIA label for search box reset button',
       }),
       resetButtonAriaLabel: translate({
         id: 'theme.SearchModal.searchBox.resetButtonTitle',
-        message: 'پاک کردن عبارت جستجو',
+        message: 'Clear the search query',
         description: 'The label and ARIA label for search box reset button',
       }),
       cancelButtonText: translate({
         id: 'theme.SearchModal.searchBox.cancelButtonText',
-        message: 'لغو',
+        message: 'Cancel',
         description: 'The label and ARIA label for search box cancel button',
       }),
       cancelButtonAriaLabel: translate({
         id: 'theme.SearchModal.searchBox.cancelButtonText',
-        message: 'لغو',
+        message: 'Cancel',
         description: 'The label and ARIA label for search box cancel button',
       }),
     },
     startScreen: {
       recentSearchesTitle: translate({
         id: 'theme.SearchModal.startScreen.recentSearchesTitle',
-        message: 'اخیر',
+        message: 'Recent',
         description: 'The title for recent searches',
       }),
       noRecentSearchesText: translate({
         id: 'theme.SearchModal.startScreen.noRecentSearchesText',
-        message: 'جستجوهای اخیری وجود ندارد',
+        message: 'No recent searches',
         description: 'The text when no recent searches',
       }),
       saveRecentSearchButtonTitle: translate({
         id: 'theme.SearchModal.startScreen.saveRecentSearchButtonTitle',
-        message: 'ذخیره این جستجو',
+        message: 'Save this search',
         description: 'The label for save recent search button',
       }),
       removeRecentSearchButtonTitle: translate({
         id: 'theme.SearchModal.startScreen.removeRecentSearchButtonTitle',
-        message: 'حذف این جستجو از تاریخچه',
+        message: 'Remove this search from history',
         description: 'The label for remove recent search button',
       }),
       favoriteSearchesTitle: translate({
         id: 'theme.SearchModal.startScreen.favoriteSearchesTitle',
-        message: 'مورد علاقه',
+        message: 'Favorites',
         description: 'The title for favorite searches',
       }),
       removeFavoriteSearchButtonTitle: translate({
         id: 'theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle',
-        message: 'حذف این جستجو از مورد علاقه‌ها',
+        message: 'Remove this search from favorites',
         description: 'The label for remove favorite search button',
       }),
     },
     errorScreen: {
       titleText: translate({
         id: 'theme.SearchModal.errorScreen.titleText',
-        message: 'دریافت نتایج ممکن نیست',
+        message: 'Unable to fetch results',
         description: 'The title for error screen of search modal',
       }),
       helpText: translate({
         id: 'theme.SearchModal.errorScreen.helpText',
-        message: 'اتصال شبکه خود را بررسی کنید.',
+        message: 'Check your network connection.',
         description: 'The help text for error screen of search modal',
       }),
     },
     footer: {
       selectText: translate({
         id: 'theme.SearchModal.footer.selectText',
-        message: 'برای انتخاب',
+        message: 'to select',
         description: 'The explanatory text of the action for the enter key',
       }),
       selectKeyAriaLabel: translate({
         id: 'theme.SearchModal.footer.selectKeyAriaLabel',
-        message: 'دکمه اینتر',
+        message: 'Enter key',
         description:
           'The ARIA label for the Enter key button that makes the selection',
       }),
       navigateText: translate({
         id: 'theme.SearchModal.footer.navigateText',
-        message: 'برای حرکت',
+        message: 'to navigate',
         description:
           'The explanatory text of the action for the Arrow up and Arrow down key',
       }),
       navigateUpKeyAriaLabel: translate({
         id: 'theme.SearchModal.footer.navigateUpKeyAriaLabel',
-        message: 'فلش بالا',
+        message: 'Arrow up',
         description:
           'The ARIA label for the Arrow up key button that makes the navigation',
       }),
       navigateDownKeyAriaLabel: translate({
         id: 'theme.SearchModal.footer.navigateDownKeyAriaLabel',
-        message: 'فلش پایین',
+        message: 'Arrow down',
         description:
           'The ARIA label for the Arrow down key button that makes the navigation',
       }),
       closeText: translate({
         id: 'theme.SearchModal.footer.closeText',
-        message: 'برای بستن',
+        message: 'to close',
         description: 'The explanatory text of the action for Escape key',
       }),
       closeKeyAriaLabel: translate({
         id: 'theme.SearchModal.footer.closeKeyAriaLabel',
-        message: 'دکمه Escape',
+        message: 'Escape key',
         description:
           'The ARIA label for the Escape key button that close the modal',
       }),
       searchByText: translate({
         id: 'theme.SearchModal.footer.searchByText',
-        message: 'جستجو با',
+        message: 'Search by',
         description: 'The text explain that the search is making by Typesense',
       }),
     },
     noResultsScreen: {
       noResultsText: translate({
         id: 'theme.SearchModal.noResultsScreen.noResultsText',
-        message: 'نتیجه‌ای برای',
+        message: 'No results for',
         description:
           'The text explains that there are no results for the following search',
       }),
       suggestedQueryText: translate({
         id: 'theme.SearchModal.noResultsScreen.suggestedQueryText',
-        message: 'جستجو برای',
+        message: 'Search for',
         description:
           'The text for the suggested query when no results are found for the following search',
       }),
       reportMissingResultsText: translate({
         id: 'theme.SearchModal.noResultsScreen.reportMissingResultsText',
-        message: 'فکر می‌کنید این جستجو باید نتیجه داشته باشد؟',
+        message: 'Think this search should return results?',
         description:
           'The text for the question where the user thinks there are missing results',
       }),
       reportMissingResultsLinkText: translate({
         id: 'theme.SearchModal.noResultsScreen.reportMissingResultsLinkText',
-        message: 'به ما بگویید.',
+        message: 'Let us know.',
         description: 'The text for the link to report missing results',
       }),
     },
   },
   placeholder: translate({
     id: 'theme.SearchModal.placeholder',
-    message: 'جستجو در مستندات',
+    message: 'Search the docs',
     description: 'The placeholder of the input of the DocSearch pop-up modal',
   }),
 };
