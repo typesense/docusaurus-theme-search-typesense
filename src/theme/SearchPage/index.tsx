@@ -24,6 +24,7 @@ import {
   // @ts-ignore
 } from '@docusaurus/theme-common';
 import {useSearchPage} from '../../hooks/useSearchPage';
+import {useCurrentLocale} from '../../hooks/useCurrentLocale';
 // @ts-ignore
 import {useTitleFormatter} from '../../utils/generalUtils';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -158,8 +159,8 @@ type ResultDispatcher =
 function SearchPageContent(): JSX.Element {
   const {
     siteConfig: {themeConfig},
-    i18n: {currentLocale},
   } = useDocusaurusContext();
+  const currentLocale = useCurrentLocale();
   const {
     typesense: {
       typesenseCollectionName,

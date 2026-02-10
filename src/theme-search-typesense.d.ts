@@ -18,6 +18,8 @@ declare module 'docusaurus-theme-search-typesense' {
       typesenseServerConfig: TypesenseConfigurationOptions;
       typesenseSearchParameters: TypesenseSearchParams;
       searchPagePath: string | false | null;
+      /** Override locale for search (e.g. when Docusaurus context is unavailable). Falls back after context and document.lang. */
+      localeOverride?: string;
     };
   };
   export type UserThemeConfig = DeepPartial<ThemeConfig>;

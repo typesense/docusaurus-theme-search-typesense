@@ -38,6 +38,8 @@ const Schema = Joi.object({
       .try(Joi.boolean().invalid(true), Joi.string())
       .allow(null)
       .default(DEFAULT_CONFIG.searchPagePath),
+
+    localeOverride: Joi.string().optional(),
   })
     .label('themeConfig.typesense')
     .required()

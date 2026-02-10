@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState, useRef, useCallback, useMemo, useEffect} from 'react';
+import React, {useState, useRef, useCallback, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 // @ts-ignore
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -21,6 +21,7 @@ import Head from '@docusaurus/Head';
 import {isRegexpStringMatch} from '@docusaurus/theme-common';
 // @ts-ignore
 import {useSearchPage} from '../../hooks/useSearchPage';
+import {useCurrentLocale} from '../../hooks/useCurrentLocale';
 import {
   DocSearchButton,
   useDocSearchKeyboardEvents,
@@ -41,11 +42,6 @@ import type {
 } from 'typesense-docsearch-react/dist/esm/types';
 import type {AutocompleteState} from '@algolia/autocomplete-core';
 import {DocsPreferredVersionContextProvider} from '@docusaurus/plugin-content-docs/lib/client/index.js';
-
-// Log as soon as this module is loaded (to verify the theme chunk runs)
-if (typeof console !== 'undefined') {
-  console.log('[docusaurus-theme-search-typesense] SearchBar module loaded');
-}
 
 type DocSearchProps = Omit<
   DocSearchModalProps,
@@ -92,33 +88,7 @@ function DocSearch({
   externalUrlRegex,
   ...props
 }: DocSearchProps) {
-  const docusaurusContext = useDocusaurusContext();
-  const {siteMetadata, i18n} = docusaurusContext;
-
-  // Log comprehensive Docusaurus context access for debugging
-  useEffect(() => {
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('[docusaurus-theme-search-typesense] 🔍 Docusaurus Context Access');
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('📦 Full context object:', docusaurusContext);
-    console.log('');
-    console.log('🌍 i18n Configuration:');
-    console.log('  ✅ currentLocale:', i18n?.currentLocale || 'NOT SET');
-    console.log('  ✅ locales:', i18n?.locales || 'NOT SET');
-    console.log('  ✅ defaultLocale:', i18n?.defaultLocale || 'NOT SET');
-    console.log('  ✅ localeConfigs:', i18n?.localeConfigs || 'NOT SET');
-    console.log('  ✅ Full i18n object:', i18n);
-    console.log('');
-    console.log('📄 siteMetadata:');
-    console.log('  ✅ title:', siteMetadata?.title);
-    console.log('  ✅ tagline:', siteMetadata?.tagline);
-    console.log('');
-    console.log('🔧 How we access Docusaurus config:');
-    console.log('  → useDocusaurusContext() from "@docusaurus/useDocusaurusContext"');
-    console.log('  → Returns: { siteMetadata, i18n, ... }');
-    console.log('  → Current language detected:', i18n?.currentLocale || 'UNKNOWN');
-    console.log('═══════════════════════════════════════════════════════════');
-  }, [docusaurusContext, i18n?.currentLocale]);
+  useCurrentLocale();
 
   const contextualSearchFacetFilters =
     useTypesenseContextualFilters() as string;

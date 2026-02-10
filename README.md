@@ -23,6 +23,17 @@ After updating this package (e.g. `npm install` or `yarn`), if you do not see th
 
 This forces the bundler to use the updated theme code from `node_modules` instead of cached output.
 
+### Locale and i18n
+
+The theme detects the current locale in this order: (1) Docusaurus context (`i18n.currentLocale`), (2) `document.documentElement.lang`, (3) config override, (4) window env, (5) default `en`.
+
+- **Config override:** In `docusaurus.config.js`, under `themeConfig.typesense`, you can set `localeOverride: 'fa'` (or any locale code) to force the search locale when the theme cannot read it from Docusaurus.
+- **Window env:** You can set the locale from your app so the theme picks it up without Docusaurus context. Before the theme runs, set one of:
+  - `window.__SEARCH_THEME_LOCALE__ = 'fa'`
+  - or, if you already use `window.env`: `window.env.LOCALE = 'fa'`
+
+In the browser console you will see a single log: `[docusaurus-theme-search-typesense] locale: <value> | source: <context|document|config|window|default>` so you can confirm which source is used.
+
 ## Help
 
 If you have any questions or run into any problems, please create a Github issue and we'll try our best to help.
