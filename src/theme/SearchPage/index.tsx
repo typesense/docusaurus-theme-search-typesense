@@ -286,7 +286,7 @@ function SearchPageContent(): JSX.Element {
             title: titles.pop()!,
             url: isRegexpStringMatch(externalUrlRegex, parsedURL.href)
               ? parsedURL.href
-              : parsedURL.pathname + parsedURL.hash,
+              : parsedURL.pathname + parsedURL.search + parsedURL.hash,
             summary: snippet.content
               ? `${sanitizeValue(snippet.content.value)}...`
               : '',
