@@ -191,7 +191,7 @@ function DocSearch({
         const url = new URL(item.url);
         return {
           ...item,
-          url: withBaseUrl(`${url.pathname}${url.hash}`),
+          url: withBaseUrl(`${url.pathname}${url.search}${url.hash}`),
         };
       }),
   ).current;
