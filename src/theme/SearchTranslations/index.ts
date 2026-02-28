@@ -9,6 +9,11 @@ import {translate} from '@docusaurus/Translate';
 
 import type {DocSearchTranslations} from 'typesense-docsearch-react';
 
+/**
+ * Default messages are in English so that when locale is "en" (or no translation
+ * is found), the UI shows English. For other locales (e.g. fa), Docusaurus loads
+ * from i18n/<locale>/theme.json.
+ */
 const translations: DocSearchTranslations & {placeholder: string} = {
   button: {
     buttonText: translate({
@@ -26,12 +31,12 @@ const translations: DocSearchTranslations & {placeholder: string} = {
     searchBox: {
       resetButtonTitle: translate({
         id: 'theme.SearchModal.searchBox.resetButtonTitle',
-        message: 'Clear the query',
+        message: 'Clear the search query',
         description: 'The label and ARIA label for search box reset button',
       }),
       resetButtonAriaLabel: translate({
         id: 'theme.SearchModal.searchBox.resetButtonTitle',
-        message: 'Clear the query',
+        message: 'Clear the search query',
         description: 'The label and ARIA label for search box reset button',
       }),
       cancelButtonText: translate({
@@ -68,7 +73,7 @@ const translations: DocSearchTranslations & {placeholder: string} = {
       }),
       favoriteSearchesTitle: translate({
         id: 'theme.SearchModal.startScreen.favoriteSearchesTitle',
-        message: 'Favorite',
+        message: 'Favorites',
         description: 'The title for favorite searches',
       }),
       removeFavoriteSearchButtonTitle: translate({
@@ -85,7 +90,7 @@ const translations: DocSearchTranslations & {placeholder: string} = {
       }),
       helpText: translate({
         id: 'theme.SearchModal.errorScreen.helpText',
-        message: 'You might want to check your network connection.',
+        message: 'Check your network connection.',
         description: 'The help text for error screen of search modal',
       }),
     },
@@ -133,7 +138,7 @@ const translations: DocSearchTranslations & {placeholder: string} = {
       searchByText: translate({
         id: 'theme.SearchModal.footer.searchByText',
         message: 'Search by',
-        description: 'The text explain that the search is making by Algolia',
+        description: 'The text explain that the search is making by Typesense',
       }),
     },
     noResultsScreen: {
@@ -145,13 +150,13 @@ const translations: DocSearchTranslations & {placeholder: string} = {
       }),
       suggestedQueryText: translate({
         id: 'theme.SearchModal.noResultsScreen.suggestedQueryText',
-        message: 'Try searching for',
+        message: 'Search for',
         description:
           'The text for the suggested query when no results are found for the following search',
       }),
       reportMissingResultsText: translate({
         id: 'theme.SearchModal.noResultsScreen.reportMissingResultsText',
-        message: 'Believe this query should return results?',
+        message: 'Think this search should return results?',
         description:
           'The text for the question where the user thinks there are missing results',
       }),
@@ -164,7 +169,7 @@ const translations: DocSearchTranslations & {placeholder: string} = {
   },
   placeholder: translate({
     id: 'theme.SearchModal.placeholder',
-    message: 'Search docs',
+    message: 'Search the docs',
     description: 'The placeholder of the input of the DocSearch pop-up modal',
   }),
 };

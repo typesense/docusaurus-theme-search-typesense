@@ -1,0 +1,38 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "搜索\"{query}\"的结果",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "搜索文档",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "找到1个文档|找到{count}个文档",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "在此输入搜索内容",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "搜索",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.typesenseLabel": {
+    "message": "由 Typesense 提供搜索",
+    "description": "The ARIA label for Typesense mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "未找到结果",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "正在获取新结果...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchPage.breadcrumbs.ariaLabel": {
+    "message": "面包屑导航",
+    "description": "The ARIA label for breadcrumbs navigation"
+  }
+}

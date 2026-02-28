@@ -57,6 +57,6 @@
     "module": "esnext",
     "target": "esnext"
   },
-  "include": ["src/theme", "src/client", "src/*.d.ts"],
+  "include": ["src/theme", "src/client", "src/hooks", "src/*.d.ts"],
   "exclude": ["**/__tests__/**"]
 }

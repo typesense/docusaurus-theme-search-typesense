@@ -21,6 +21,7 @@ import Head from '@docusaurus/Head';
 import {isRegexpStringMatch} from '@docusaurus/theme-common';
 // @ts-ignore
 import {useSearchPage} from '../../hooks/useSearchPage';
+import {useCurrentLocale} from '../../hooks/useCurrentLocale';
 import {
   DocSearchButton,
   useDocSearchKeyboardEvents,
@@ -87,7 +88,7 @@ function DocSearch({
   externalUrlRegex,
   ...props
 }: DocSearchProps) {
-  const {siteMetadata} = useDocusaurusContext();
+  useCurrentLocale();
 
   const contextualSearchFacetFilters =
     useTypesenseContextualFilters() as string;

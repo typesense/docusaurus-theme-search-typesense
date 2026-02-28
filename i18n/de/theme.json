@@ -1,0 +1,38 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Suchergebnisse für \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Dokumentation durchsuchen",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Ein Dokument gefunden|{count} Dokumente gefunden",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Suchbegriff hier eingeben",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Suchen",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.typesenseLabel": {
+    "message": "Suche von Typesense",
+    "description": "The ARIA label for Typesense mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Keine Ergebnisse gefunden",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Neue Ergebnisse werden abgerufen...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchPage.breadcrumbs.ariaLabel": {
+    "message": "Brotkrümel-Navigation",
+    "description": "The ARIA label for breadcrumbs navigation"
+  }
+}

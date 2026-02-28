@@ -24,6 +24,7 @@ import {
   // @ts-ignore
 } from '@docusaurus/theme-common';
 import {useSearchPage} from '../../hooks/useSearchPage';
+import {useCurrentLocale} from '../../hooks/useCurrentLocale';
 // @ts-ignore
 import {useTitleFormatter} from '../../utils/generalUtils';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -158,8 +159,8 @@ type ResultDispatcher =
 function SearchPageContent(): JSX.Element {
   const {
     siteConfig: {themeConfig},
-    i18n: {currentLocale},
   } = useDocusaurusContext();
+  const currentLocale = useCurrentLocale();
   const {
     typesense: {
       typesenseCollectionName,
@@ -427,7 +428,7 @@ function SearchPageContent(): JSX.Element {
               className={styles.searchQueryInput}
               placeholder={translate({
                 id: 'theme.SearchPage.inputPlaceholder',
-                message: 'Type your search here',
+                message: 'Type your search query',
                 description: 'The placeholder for search page input',
               })}
               aria-label={translate({
@@ -468,7 +469,7 @@ function SearchPageContent(): JSX.Element {
               href={`https://typesense.org/?utm_medium=referral&utm_content=powered_by&utm_campaign=docsearch`}
               aria-label={translate({
                 id: 'theme.SearchPage.typesenseLabel',
-                message: 'Search by Typesense',
+                message: 'Search powered by Typesense',
                 description: 'The ARIA label for Typesense mention',
               })}>
               <svg
@@ -514,7 +515,11 @@ function SearchPageContent(): JSX.Element {
                   </h2>
 
                   {breadcrumbs.length > 0 && (
-                    <nav aria-label="breadcrumbs">
+                    <nav aria-label={translate({
+                      id: 'theme.SearchPage.breadcrumbs.ariaLabel',
+                      message: 'Breadcrumbs',
+                      description: 'The ARIA label for breadcrumbs navigation',
+                    })}>
                       <ul
                         className={clsx(
                           'breadcrumbs',

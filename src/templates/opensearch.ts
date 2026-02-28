@@ -10,7 +10,7 @@ export default `
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
   <ShortName><%= it.title %></ShortName>
-  <Description>Search <%= it.title %></Description>
+  <Description>جستجو در <%= it.title %></Description>
   <InputEncoding>UTF-8</InputEncoding>
   <% if (it.faviconUrl) { _%>
     <Image width="16" height="16" type="image/x-icon"><%= it.faviconUrl %></Image>
