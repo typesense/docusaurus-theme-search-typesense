@@ -21,6 +21,10 @@
     "access": "public"
   },
   "repository": "typesense/docusaurus-theme-search-typesense",
+  "homepage": "https://github.com/typesense/docusaurus-theme-search-typesense#readme",
+  "bugs": {
+    "url": "https://github.com/typesense/docusaurus-theme-search-typesense/issues"
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsc --build && node copyUntypedFiles.mjs && prettier --config .prettierrc --write \"src/**/*.{js,ts,tsx,css}\"",
