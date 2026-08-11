@@ -17,6 +17,11 @@
     }
   },
   "types": "src/theme-search-typesense.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "!lib/.tsbuildinfo*"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -27,17 +32,18 @@
     "watch": "run-p -c copy:watch build:watch",
     "build:watch": "tsc --build --watch",
     "copy:watch": "node copyUntypedFiles.mjs --watch",
+    "prepack": "tsc --build --force && node copyUntypedFiles.mjs",
     "test": "echo 'No Tests Founds'"
   },
   "dependencies": {
-    "@docusaurus/core": "~3.9.0",
-    "@docusaurus/logger": "~3.9.0",
-    "@docusaurus/plugin-content-docs": "~3.9.0",
-    "@docusaurus/theme-common": "~3.9.0",
-    "@docusaurus/theme-translations": "~3.9.0",
-    "@docusaurus/utils": "~3.9.0",
-    "@docusaurus/utils-validation": "~3.9.0",
-    "algoliasearch-helper": "^3.13.3",
+    "@docusaurus/core": "~3.10.0",
+    "@docusaurus/logger": "~3.10.0",
+    "@docusaurus/plugin-content-docs": "~3.10.0",
+    "@docusaurus/theme-common": "~3.10.0",
+    "@docusaurus/theme-translations": "~3.10.0",
+    "@docusaurus/utils": "~3.10.0",
+    "@docusaurus/utils-validation": "~3.10.0",
+    "algoliasearch-helper": "^3.29.3",
     "clsx": "^2.0.0",
     "eta": "^2.2.0",
     "fs-extra": "^11.1.1",
@@ -48,22 +54,23 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "~3.9.0",
-    "@docusaurus/types": "~3.9.0",
+    "@docusaurus/module-type-aliases": "~3.10.0",
+    "@docusaurus/types": "~3.10.0",
     "@types/fs-extra": "^11.0.0",
     "@types/lodash": "^4.14.182",
+    "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "typescript": "~5.6.2"
   },
   "peerDependencies": {
-    "@docusaurus/core": "~3.8.0",
-    "@docusaurus/theme-common": "~3.8.0",
+    "@docusaurus/core": ">=3.8.0 <4.0.0",
+    "@docusaurus/theme-common": ">=3.8.0 <4.0.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }

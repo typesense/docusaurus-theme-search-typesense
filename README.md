@@ -10,6 +10,17 @@ If you're new to Typesense, it is an **open source search engine** that is simpl
 
 Think of it as an open source alternative to Algolia and an easier-to-use, batteries-included alternative to ElasticSearch. Get a quick overview from [this guide](https://typesense.org/guide/).
 
+## Compatibility
+
+| `docusaurus-theme-search-typesense` | Docusaurus | Node   |
+| ----------------------------------- | ---------- | ------ |
+| `0.27.x`                            | `3.10.x`   | `>=20` |
+| `0.26.x`                            | `3.9.x`    | `>=20` |
+| `0.25.x`                            | `3.8.x`    | `>=18` |
+| `0.24.x`                            | `3.7.x`    | `>=18` |
+
+The `peerDependencies` range stays open across Docusaurus `3.x`, but each release pins its direct `@docusaurus/*` dependencies to a single minor. Match the row above to avoid ending up with two copies of Docusaurus in your dependency tree.
+
 ## Documentation
 
 Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: [https://typesense.org/docs/guide/docsearch.html](https://typesense.org/docs/guide/docsearch.html).
