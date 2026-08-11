@@ -51,7 +51,7 @@
     "noEmit": false,
     "composite": true,
     "incremental": true,
-    "tsBuildInfoFile": "./lib/.tsbuildinfo-client",
+    "tsBuildInfoFile": "./.tsbuildinfo-client",
     "rootDir": "src",
     "outDir": "lib",
     "module": "esnext",
