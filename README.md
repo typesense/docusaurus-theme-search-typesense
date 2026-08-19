@@ -14,6 +14,15 @@ Think of it as an open source alternative to Algolia and an easier-to-use, batte
 
 Read detailed step-by-step instructions on how to first setup the DocSearch scraper and then install this plugin here: [https://typesense.org/docs/guide/docsearch.html](https://typesense.org/docs/guide/docsearch.html).
 
+## Compatibility
+
+| `docusaurus-theme-search-typesense` | Supported Docusaurus | Node.js |
+| ----------------------------------- | -------------------- | ------- |
+| `0.27.x`                            | `>= 3.9.0 < 4.0.0`   | `>=20`  |
+| `0.26.x`                            | `3.9.x`              | `>=20`  |
+| `0.25.x`                            | `3.8.x`              | `>=18`  |
+| `0.24.x`                            | `3.7.x`              | `>=18`  |
+
 ## Help
 
 If you have any questions or run into any problems, please create a Github issue and we'll try our best to help.
