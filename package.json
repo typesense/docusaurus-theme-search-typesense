@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-theme-search-typesense",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "description": "Typesense search component for Docusaurus.",
   "main": "lib/index.js",
   "files": [
@@ -24,7 +24,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "typesense/docusaurus-theme-search-typesense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typesense/docusaurus-theme-search-typesense.git"
+  },
   "homepage": "https://github.com/typesense/docusaurus-theme-search-typesense#readme",
   "bugs": {
     "url": "https://github.com/typesense/docusaurus-theme-search-typesense/issues"
