@@ -24,7 +24,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "typesense/docusaurus-theme-search-typesense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typesense/docusaurus-theme-search-typesense.git"
+  },
   "homepage": "https://github.com/typesense/docusaurus-theme-search-typesense#readme",
   "bugs": {
     "url": "https://github.com/typesense/docusaurus-theme-search-typesense/issues"
